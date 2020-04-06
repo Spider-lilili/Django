@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    开设专业
+{% endblock %}
+
+{% block headerjs %}
+
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table border="1" align="center" width="700">
+            <tr>
+                <td height="60" width="300" align="center" style="font-size: 20px">类别</td>
+                <td align="center" style="font-size: 20px">专业名称</td>
+            </tr>
+            {% for professional in professional_list %}
+                <tr>
+                    <th height="30">{{ professional.special_type }}</th>
+                    <th>{{ professional.special_detail }}</th>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div align="center" style="font-size: 20px">
+        {% if professional_list.has_previous %}
+            <a href="/school/{{ id }}/professional/?page={{ professional_list.previous_page_number }}">上一页</a>
+        {% else %}
+            <a href="/school/{{ id }}/professional/?page=1">上一页</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ professional_list.number }} of {{ professional_list.paginator.num_pages }}
+        </span>
+
+        {% if professional_list.has_next %}
+            <a class='active' href="/school/{{ id }}/professional/?page={{ professional_list.next_page_number }}">下一页</a>
+        {% else %}
+            <a class='active' href="/school/{{ id }}/professional/?page={{ professional_list.paginator.num_pages }}">下一页</a>
+        {% endif %}
+    </div>
+{% endblock %}

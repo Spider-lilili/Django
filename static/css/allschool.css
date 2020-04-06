@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* 导航 */
+.navbar {
+    text-align: center;
+    overflow: hidden;
+    background-color: dodgerblue;
+}
+
+/* 导航栏样式 */
+.navbar a {
+    height: 50px;
+    font-size: 150%;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+

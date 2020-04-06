@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    院校口碑
+{% endblock %}
+
+{% block headerjs %}
+
+{% endblock %}
+
+{% block main %}
+    <div align="center">
+        {% for comment in comment_list %}
+            <p>
+                {{ comment.nickname }}
+            </p>
+            <p>
+                <img width="50" height="50" src="{{ comment.avatar }}">
+            </p>
+            <p>
+                {{ comment.content }}
+            </p>
+        {% endfor %}
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div align="center" style="font-size: 20px">
+        {% if comment_list.has_previous %}
+            <a href="/school/{{ id }}/comment/?page={{ comment_list.previous_page_number }}">上一页</a>
+        {% else %}
+            <a href="/school/{{ id }}/comment/?page=1">上一页</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ comment_list.number }} of {{ comment_list.paginator.num_pages }}
+        </span>
+
+        {% if comment_list.has_next %}
+            <a class='active' href="/school/{{ id }}/comment/?page={{ comment_list.next_page_number }}">下一页</a>
+        {% else %}
+            <a class='active' href="/school/{{ id }}/comment/?page={{ comment_list.paginator.num_pages }}">下一页</a>
+        {% endif %}
+    </div>
+
+
+{% endblock %}
+
+

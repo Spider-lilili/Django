@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    录取分数线
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table border="1">
+            <tr>
+                <td>年份</td>
+                <td>最高分</td>
+                <td>平均分</td>
+                <td>最低分</td>
+                <td>最低位次</td>
+                <td>省控线</td>
+                <td>招生类型</td>
+                <td>录取批次</td>
+            </tr>
+            {% for provinceline in provinceline_list %}
+                <tr>
+                    <th>{{ provinceline.year }}</th>
+                    <th>{{ provinceline.highest_score }}</th>
+                    <th>{{ provinceline.average_score }}</th>
+                    <th>{{ provinceline.lowest_score }}</th>
+                    <th>{{ provinceline.lowest_rank }}</th>
+                    <th>{{ provinceline.provincial_line }}</th>
+                    <th>{{ provinceline.admission_type }}</th>
+                    <th>{{ provinceline.admission_lot }}</th>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div>
+        <table border="1">
+            <tr>
+                <td>省份</td>
+                <td>最低分</td>
+            </tr>
+            {% for provinceline in other_provinceline %}
+                <tr>
+                    <th>{{ provinceline.province }}</th>
+                    <th>{{ provinceline.score }}</th>
+                </tr>
+            {% endfor %}
+            
+        </table>
+    </div>
+    
+    
+{% endblock %}
+
+

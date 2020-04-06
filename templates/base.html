@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{% block title %}
+
+    {% endblock %}</title>
+    <link rel="stylesheet" href="/static/allschool.css">
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="stylesheet" href="/static/detail.css">
+    <link rel="stylesheet" href="/static/carts.css">
+    <link rel="stylesheet" href="/static/reset.css">
+    <link rel="stylesheet" href="/static/mygxin.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/carts.js"></script>
+
+    {% block headerjs %}
+
+    {% endblock %}
+
+
+</head>
+
+<body>
+
+
+    <div class="head">
+        <div class="head-in">
+            <div class="register">
+                <a href="http://127.0.0.1:8000/user/register">免费注册</a>
+            </div>
+            <div class="sign">
+                <a href="http://127.0.0.1:8000/user/login">登录</a>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="search">
+
+        <div class="input">
+            <input type="" name="" value="请输入查询的大学">
+            <img src="/static/1_06.png">
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="/school/">学校大全</a>
+        <a href="/school/{{ id }}/">学校概况</a>
+        <a href="/school/{{ id }}/professional/">开设专业</a>
+        <a href="/school/{{ id }}/provinceline/">历年分数</a>
+        <a href="/school/{{ id }}/job_area/">签约地区</a>
+        <a href="/school/{{ id }}/job_company/">签约单位</a>
+        <a href="/school/{{ id }}/comment/">院校口碑</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    {% block main %}
+
+    {% endblock %}
+
+
+    {% block footerjs %}
+
+    {% endblock %}
+
+
+</body>
+
+</html>
