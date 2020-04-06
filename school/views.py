@@ -22,6 +22,10 @@ def get_page(info, page=1, num=10):
         schools = paginator.page(paginator.num_pages)
     return schools
 
+class LoginView(View):
+    def get(self,request):
+        return render(request,'login.html')
+
 
 class IndexView(View):
     def get(self, request, id=459):

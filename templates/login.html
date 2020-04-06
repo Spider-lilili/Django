@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登陆页</title>
 </head>
-<body>
+<style>
+    div {
+    display: block;
+    }
 
+    .login_wrap {
+    width: 100%;
+    height: 100%;
+    background: url(/media/background.png) no-repeat;
+    position: relative;
+    background-size: 100% auto;
+    }
+
+    .login_wrap .login_box .login_title {
+    font-size: 28px;
+    font-family: MicrosoftYaHei;
+    color: #333;
+    text-align: center;
+    margin: 25px 0 43px 0;
+    }
+</style>
+<body>
+    <div class="login_wrap">
+        <div class="login_box"></div>
+            <div class="login_title">登陆</div>
+            <input type="number" class="phone" placeholder="手机号">
+    </div>
 </body>
 </html>
