@@ -11,46 +11,47 @@
 {% block main %}
     <div class="secondTask">
         {% for comment in comment_list %}
-            <div class="commentItem">
-            <div class="user">
-                <img class="userPic" src="{{ comment.avatar }}" alt="用户头像"/>
-                <div class="commentInfo">
-                    <div class="userInfo">
-                        <span class="userName">{{ comment.nickname }}</span>
-                        <span class="studentClassInSchool">在校生</span>
+            <div class="commentInfo">
+                <div class="user">
+                    <img class="userPic" src="{{ comment.avatar }}" alt="用户头像"/>
+                    <div class="commentInfo">
+                        <div class="userInfo">
+                            <span class="userName">{{ comment.nickname }}</span>
+                            <span class="studentClassInSchool">在校生</span>
+                        </div>
+                        <div class="issueData">{{ comment.comment_time }}</div>
                     </div>
-                    <div class="issueData">{{ comment.comment_time }}</div>
-                </div>
-                <div class="gradeCon">
-                    <span class="gradeInfo">综合评分:</span>
-                    <span class="grade">{{ comment.comprehensive_score }}</span>
-                </div>
-            </div>
-            <div class="content">
-                {{ comment.content }}
-            </div>
-            <div class="likeCon">
-                <div class="like">
-                    <div class="no">
-                        <i class="icon-not_good operat_icon bad"></i>
-                        <span class="noSum">{{ comment.point_num }}</span>
-                    </div>
-                    <div class="yes">
-                        <i class="icon-good operat_icon"></i>
-                        <span class="yesSum">{{ comment.like_num }}</span>
+                    <div class="gradeCon">
+                        <span class="gradeInfo">综合评分:</span>
+                        <span class="grade">{{ comment.comprehensive_score }}</span>
                     </div>
                 </div>
+                <div class="content">
+                    {{ comment.content }}
+                </div>
+                <div class="likeCon">
+                    <div class="like">
+                        <div class="no">
+                            <i class="icon-not_good operat_icon bad"></i>
+                            <span class="noSum">{{ comment.point_num }}</span>
+                        </div>
+                        <div class="yes">
+                            <i class="icon-good operat_icon"></i>
+                            <span class="yesSum">{{ comment.like_num }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border_line"></div>
             </div>
-            <div class="cut"></div>
-        </div>
         {% endfor %}
+    </div>
 
     </div>
 
     <br>
     <br>
     <br>
-    <div align="center" style="font-size: 20px">
+    <div align="center" style="font-size: 20px" class="bottom_page">
         {% if comment_list.has_previous %}
             <a href="/school/{{ id }}/comment/?page={{ comment_list.previous_page_number }}">上一页</a>
         {% else %}

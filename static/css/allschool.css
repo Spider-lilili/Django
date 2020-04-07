@@ -33,3 +33,7 @@ body {
     color: black;
 }
 
+.bottom_page {
+    margin-bottom: 50px;
+    text-align: center;
+}

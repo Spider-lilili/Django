@@ -77,10 +77,22 @@
                     </div>
                 </div>
                 <div class="two">
-                    <div class="schoolClass">{{ base_info.level_name }}</div>
-                    <div class="schoolClass">{{ base_info.type_name }}</div>
-                    <div class="schoolClass">{{ base_info.nature_name }}</div>
-                    <div class="schoolClass">{{ base_info.dual_class_name }}</div>
+                    {% if base_info.level_name %}
+                        <div class="schoolClass">{{ base_info.level_name }}</div>
+                    {% endif %}
+
+                    {% if base_info.type_name %}
+                        <div class="schoolClass">{{ base_info.type_name }}</div>
+                    {% endif %}
+
+                    {% if base_info.nature_name %}
+                        <div class="schoolClass">{{ base_info.nature_name }}</div>
+                    {% endif %}
+
+                    {% if base_info.dual_class_name %}
+                        <div class="schoolClass">{{ base_info.dual_class_name }}</div>
+                    {% endif %}
+
                 </div>
                 <div class="three">
                     <div class="schoolDetail">
