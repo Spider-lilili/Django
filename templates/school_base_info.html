@@ -5,16 +5,58 @@
 {% endblock %}
 
 {% block headerjs %}
-
+    <link rel="stylesheet" href="/static/school.css">
 {% endblock %}
 
 {% block main %}
-    <div>
-        <img src="{{ school.logo }}">
-        <p>
-            {{ school.school_name }}
-        </p>
+
+    <div class="firstBack">
+        <div class="container">
+            <div class="cont">
+                <div class="schoolPic">
+                    <img class="schoolPicLogo" src="{{ school.logo }}" alt="pic"/>
+                </div>
+            </div>
+            <div class="info">
+                <div class="one">
+                    <span class="schoolName">{{ school.school_name }}</span>
+                    <span class="schoolAddress">{{ school.address }}</span>
+                    <div class="schoolHot">
+                        <img src="/media/huomiao.png" alt="火苗" width="14" height="18"/>
+                        <span class="spFont">人气值：</span>
+                        <span class="hotData">{{ base_info.view_total_number }}</span>
+                    </div>
+                </div>
+                <div class="two">
+                    <div class="schoolClass">{{ base_info.level_name }}</div>
+                    <div class="schoolClass">{{ base_info.type_name }}</div>
+                    <div class="schoolClass">{{ base_info.nature_name }}</div>
+                    <div class="schoolClass">{{ base_info.dual_class_name }}</div>
+                </div>
+                <div class="three">
+                    <div class="schoolDetail">
+                        <span class="icon-site" style="color: white;">
+                        </span>
+                        <span>官方网址：
+                        <a href="http://zs.henu.edu.cn/" target="_blank">{{ school.site }}</a>
+                    </span>
+                    </div>
+                    <div class="schoolDetail">
+                        <span class="icon-phone" style="color: white; font-size: 14px;">
+                        </span>
+                        <span>官方电话：{{ school.phone }}</span>
+                    </div>
+                    <div class="schoolDetail">
+                        <span class="icon-email" style="color: white; font-size: 14px;"></span>
+                        <span>电子邮箱：{{ school.email }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 
 {% endblock %}
 

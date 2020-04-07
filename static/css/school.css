@@ -1,0 +1,295 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*第一部分的CSS*/
+.firstBack {
+    width: 100%;
+    background-color: cadetblue;
+    /*background-color: rgb(34, 179, 183);*/
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.cont {
+    /*float: left;*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+.schoolPic {
+    margin: 54px 27px 0 0;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+.schoolPicLogo {
+    width: 120px;
+    height: 120px;
+}
+
+.info {
+    color: white;
+    display: inline-block;
+}
+
+.info .span {
+    margin-right: 10px;
+}
+
+.info .one {
+    margin: 46px 0 20px 0;
+}
+
+.info .one .schoolName {
+    font-size: 26px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.info .one .schoolAddress {
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+.info .one .schoolHot {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    background: white;
+    border-radius: 16px;
+    color: #ED3B2E;
+    padding: 0 10px;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.info .one .schoolHot img {
+    margin-right: 5px;
+    margin-top: 4px;
+    border: 0 none;
+    vertical-align: middle;
+}
+
+.spFont {
+    color: black;
+    margin-right: 10px;
+}
+
+.info .two {
+    margin-bottom: 20px;
+}
+
+.info .two .schoolClass {
+    /*float: left;*/
+    display: inline-block;
+    padding: 0 5px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid white;
+    margin-right: 11px;
+    margin-bottom: 5px;
+}
+
+.info .three .schoolDetail {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.info .three .schoolDetail a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*第二部分的CSS*/
+.secondTask {
+    width: 750px;
+    float: left;
+}
+
+.commentItem {
+    margin-bottom: 33px;
+    box-sizing: border-box;
+}
+
+.user {
+    margin-bottom: 30px;
+}
+
+.userPic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 19px;
+    vertical-align: bottom;
+    border-style: none;
+}
+
+.commentInfo {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.userInfo {
+    margin-bottom: 10px;
+}
+
+.userName {
+    margin: 0 5px 0 0;
+    font-weight: 400;
+    color: #333;
+    float: left;
+}
+
+.issueData {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+
+.studentClassInSchool {
+    background: rgba(235, 112, 30, 0.1);
+    color: #eb701e;
+    border: 1px solid #eb701e;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.gradeCon {
+    float: right;
+    line-height: 60px;
+    width: 130px;
+}
+
+.grade {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffc600;
+    margin-left: 11px;
+}
+
+.content {
+    margin: 0 0 24px 79px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.likeCon {
+    display: block;
+    margin-bottom: 22px;
+}
+
+.like {
+    float: right;
+}
+
+.like .no {
+    float: left;
+    width: 79px;
+}
+
+.like .yes {
+    float: right;
+    width: 79px;
+}
+
+.cut {
+    margin-top: 80px;
+    width: 632px;
+    margin-left: 79px;
+    height: 0.5px;
+    background: #e5e5e5;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/static/icomoon.eot?5z5inl');
+  src:  url('/static/icomoon.eot?5z5inl#iefix') format('embedded-opentype'),
+    url('/static/icomoon.ttf?5z5inl') format('truetype'),
+    url('/static/icomoon.woff?5z5inl') format('woff'),
+    url('/static/icomoon.svg?5z5inl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e905";
+}
+.icon-close2:before {
+  content: "\e906";
+}
+.icon-comment_border:before {
+  content: "\e907";
+}
+.icon-edit:before {
+  content: "\e908";
+}
+.icon-good:before {
+  content: "\e909";
+}
+.icon-not_good:before {
+  content: "\e90a";
+}
+.icon-add:before {
+  content: "\e900";
+}
+.icon-email:before {
+  content: "\e901";
+}
+.icon-message:before {
+  content: "\e902";
+}
+.icon-phone:before {
+  content: "\e903";
+}
+.icon-site:before {
+  content: "\e904";
+}
+
+.comment_wrap .comment_item .operat_score .operat_score_item .bad_box .bad {
+    vertical-align: bottom;
+}
+
+.comment_wrap .comment_item .operat_score .operat_score_item .good_box .operat_icon {
+    font-size: 20px;
+    margin-right: 9px;
+    cursor: pointer;
+}

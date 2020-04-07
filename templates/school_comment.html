@@ -5,22 +5,46 @@
 {% endblock %}
 
 {% block headerjs %}
-
+    <link rel="stylesheet" href="/static/school.css">
 {% endblock %}
 
 {% block main %}
-    <div align="center">
+    <div class="secondTask">
         {% for comment in comment_list %}
-            <p>
-                {{ comment.nickname }}
-            </p>
-            <p>
-                <img width="50" height="50" src="{{ comment.avatar }}">
-            </p>
-            <p>
+            <div class="commentItem">
+            <div class="user">
+                <img class="userPic" src="{{ comment.avatar }}" alt="用户头像"/>
+                <div class="commentInfo">
+                    <div class="userInfo">
+                        <span class="userName">{{ comment.nickname }}</span>
+                        <span class="studentClassInSchool">在校生</span>
+                    </div>
+                    <div class="issueData">{{ comment.comment_time }}</div>
+                </div>
+                <div class="gradeCon">
+                    <span class="gradeInfo">综合评分:</span>
+                    <span class="grade">{{ comment.comprehensive_score }}</span>
+                </div>
+            </div>
+            <div class="content">
                 {{ comment.content }}
-            </p>
+            </div>
+            <div class="likeCon">
+                <div class="like">
+                    <div class="no">
+                        <i class="icon-not_good operat_icon bad"></i>
+                        <span class="noSum">{{ comment.point_num }}</span>
+                    </div>
+                    <div class="yes">
+                        <i class="icon-good operat_icon"></i>
+                        <span class="yesSum">{{ comment.like_num }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cut"></div>
+        </div>
         {% endfor %}
+
     </div>
 
     <br>

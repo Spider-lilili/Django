@@ -42,7 +42,8 @@ class IndexView(View):
 class SchoolBase(View):
     def get(self, request, id=459):
         school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
-        return render(request, 'school_base_info.html', {"school": school_info, "id": id})
+        base_info = SchoolRank.objects.filter(school_id=id).first()
+        return render(request, 'school_base_info.html', {"school": school_info, "id": id, "base_info":base_info})
 
 
 class ProfessionalView(View):
