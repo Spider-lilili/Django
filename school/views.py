@@ -33,10 +33,10 @@ class IndexView(View):
         school_info = SchoolRank.objects.all().order_by('id')
         schools = get_page(school_info, page, 10)
         if schools:
-            return render(request, 'index.html', {"schools": schools, "id": id})
+            return render(request, 'index.html', {"schools": schools, "id": id, "index": True})
         else:
             schools = get_page(school_info, page, 10)
-            return render(request, 'index.html', {"schools": schools, "id": id})
+            return render(request, 'index.html', {"schools": schools, "id": id, "index": True})
 
 
 class SchoolBase(View):
@@ -50,38 +50,48 @@ class ProfessionalView(View):
     def get(self, request, id=459):
         page = request.GET.get("page", 1)
         professional_list = SchoolSpecial.objects.filter(school_id=id).order_by('id')
+        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
+        base_info = SchoolRank.objects.filter(school_id=id).first()
         schools = get_page(professional_list, page, num=15)
         if schools:
-            return render(request, 'professional.html', {"id": id, "professional_list": schools})
+            return render(request, 'professional.html', {"id": id, "professional_list": schools, "school": school_info, "base_info": base_info})
         else:
             schools = get_page(professional_list, 1, num=15)
-            return render(request, 'professional.html', {"id": id, "professional_list": schools})
+            return render(request, 'professional.html', {"id": id, "professional_list": schools, "school": school_info, "base_info": base_info})
 
 
 class ProvincelineView(View):
     def get(self, request, id=459):
+        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
+        base_info = SchoolRank.objects.filter(school_id=id).first()
         provinceline_list = SchoolProvinceline.objects.filter(school_id=id).order_by('id')
         other_provinceline = SchoolLowestScore.objects.filter(school_id=id).order_by('id')
-        return render(request, 'provinceline.html', {"id": id, "provinceline_list": provinceline_list,"other_provinceline":other_provinceline})
+        return render(request, 'provinceline.html', {"id": id, "provinceline_list": provinceline_list,"other_provinceline":other_provinceline, "school": school_info, "base_info": base_info})
 
 
 class Job_area(View):
     def get(self, request, id=459):
-        return render(request, 'index.html', {"id": id})
+        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
+        base_info = SchoolRank.objects.filter(school_id=id).first()
+        return render(request, 'index.html', {"id": id, "school": school_info, "base_info": base_info})
 
 
 class Job_company(View):
     def get(self, request, id=459):
-        return render(request, 'index.html', {"id": id})
+        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
+        base_info = SchoolRank.objects.filter(school_id=id).first()
+        return render(request, 'index.html', {"id": id, "school": school_info, "base_info": base_info})
 
 
 class CommentView(View):
     def get(self, request, id=459):
         page = request.GET.get('page', 1)
         comment_list = SchoolComment.objects.filter(school_id=id).order_by('id')
+        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
+        base_info = SchoolRank.objects.filter(school_id=id).first()
         schools = get_page(comment_list, page, num=10)
         if schools:
-            return render(request, 'school_comment.html', {"id": id, "comment_list": schools})
+            return render(request, 'school_comment.html', {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
         else:
             schools = get_page(comment_list, 1, num=10)
-            return render(request, 'school_comment.html', {"id": id, "comment_list": schools})
+            return render(request, 'school_comment.html', {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})

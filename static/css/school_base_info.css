@@ -1,0 +1,177 @@
+/*重点学科*/
+.left_info_item {
+    margin-bottom: 50px;
+    margin-left: 450px;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+.left_info_item .info_title_box {
+    margin-bottom: 23px;
+}
+
+.left_info_item .info_title_box .info_title_left {
+    float: left;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+
+.left_info_item .base_info_item .base_info_item_top .top_item_box:last-child {
+    margin-right: 0;
+}
+
+.left_info_item .info_title_box .info_title_left .title_border {
+    float: left;
+    width: 5px;
+    height: 24px;
+    background: #1ea5eb;
+    margin: 6px 10px 0 0;
+}
+
+
+.left_info_item .base_info_item .base_info_item_top .top_item_box .span3 {
+    margin-left: 0px;
+}
+
+.left_info_item .base_info_item .base_info_item_top .top_item_box .span2 {
+    margin-left: 0px;
+}
+
+
+/*基本信息详情状态框*/
+.left_info_item .base_info_item {
+    width: 750px;
+    border: 1px solid #e4e4e4;
+    padding: 20px 0;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    background-color: #fff;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+}
+
+.left_info_item .base_info_item .base_info_item_top {
+    margin: 0px 47px 37px 47px;
+}
+
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.left_info_item .base_info_item .base_info_item_top .top_item_box {
+    float: left;
+    margin-right: 84px;
+}
+
+.left_info_item .base_info_item .base_info_item_top .top_item_box .top_item {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 1px solid #1ea5eb;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1ea5eb;
+    margin-bottom: 7px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+
+
+
+
+
+
+.base_info_item .base_info_item_bottom {
+    margin-left: 21px;
+}
+
+.base_info_item .base_info_item_bottom .item_bottom_content {
+    font-size: 14px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 0;
+}
+
+.base_info_item .base_info_item_bottom .item_bottom_content .item_bottom_li {
+    float: left;
+    margin: 0 100px 19px 0;
+}
+
+.base_info_item .base_info_item_bottom .item_bottom_content .item_bottom_li img {
+    margin: -12px 10px 0 0;
+    vertical-align: middle;
+}
+
+.base_info_item .base_info_item_bottom .item_bottom_content .item_bottom_li span {
+    display: inline-block;
+    width: 275px;
+}
+
+
+.base_info_item .base_info_item_bottom .item_bottom_content .school_introduce_text_item {
+    display: inline-block;
+    width: 710px;
+    height: 114px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding-right: 5px;
+    word-break: break-all;
+    position: relative;
+    overflow: hidden;
+}
+
+.base_info_item .base_info_item_bottom .item_bottom_content .item_bottom_li:nth-child(even) {
+    margin-right: 0px;
+}
+
+.base_info_item .base_info_item_bottom .item_bottom_content .item_bottom_li {
+    float: left;
+    margin: 0 100px 19px 0;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+

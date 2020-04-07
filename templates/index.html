@@ -9,24 +9,26 @@
 
 
 {% block main %}
-    <table border="1" cellpadding="50" width="800" align="center">
-        <tr>
-            <td height="60" width="200" align="center">学校名称</td>
-            <td align="center">所在地</td>
-            <td align="center">办学类型</td>
-            <td align="center">热度排名</td>
-            <td align="center">类别排名</td>
-        </tr>
-        {% for school in schools %}
+    <div align="center">
+        <table border="1" cellpadding="50" width="800">
             <tr>
-                <th height="30" width="100"><a href="/school/{{ school.school_id }}/">{{ school.school_name }}</a></th>
-                <th>{{ school.province_name }}</th>
-                <th>{{ school.level_name }}</th>
-                <th>{{ school.rank }}</th>
-                <th>{{ school.type_name }}&emsp;{{ school.rank_type }}</th>
+                <td height="60" width="200" align="center">学校名称</td>
+                <td align="center">所在地</td>
+                <td align="center">办学类型</td>
+                <td align="center">热度排名</td>
+                <td align="center">类别排名</td>
             </tr>
-        {% endfor %}
-    </table>
+            {% for school in schools %}
+                <tr>
+                    <th height="30" width="100"><a href="/school/{{ school.school_id }}/">{{ school.school_name }}</a></th>
+                    <th>{{ school.province_name }}</th>
+                    <th>{{ school.level_name }}</th>
+                    <th>{{ school.rank }}</th>
+                    <th>{{ school.type_name }}&emsp;{{ school.rank_type }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
     <br>
     <br>
     <br>
