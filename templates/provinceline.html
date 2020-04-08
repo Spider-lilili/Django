@@ -4,54 +4,93 @@
     录取分数线
 {% endblock %}
 
-{% block main %}
-    <div>
-        <table border="1">
-            <tr>
-                <td>年份</td>
-                <td>最高分</td>
-                <td>平均分</td>
-                <td>最低分</td>
-                <td>最低位次</td>
-                <td>省控线</td>
-                <td>招生类型</td>
-                <td>录取批次</td>
-            </tr>
-            {% for provinceline in provinceline_list %}
-                <tr>
-                    <th>{{ provinceline.year }}</th>
-                    <th>{{ provinceline.highest_score }}</th>
-                    <th>{{ provinceline.average_score }}</th>
-                    <th>{{ provinceline.lowest_score }}</th>
-                    <th>{{ provinceline.lowest_rank }}</th>
-                    <th>{{ provinceline.provincial_line }}</th>
-                    <th>{{ provinceline.admission_type }}</th>
-                    <th>{{ provinceline.admission_lot }}</th>
-                </tr>
-            {% endfor %}
+{% block headerjs %}
+    <link rel="stylesheet" href="/static/professional.css">
+{% endblock %}
 
-        </table>
+{% block main %}
+    <div class="professional_left">
+        <div class="professional_wrap">
+            <div class="professional_item">
+                <div class="left_info_item">
+                    <div class="info_title_box">
+                        <div class="info_title_left">
+                            <p class="title_border"></p>
+                            <span>历年分数</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="professional_content">
+                    <table class="professional_table" cellspacing="0" width="800" border="1">
+                        <tbody style="width: 800px; overflow: hidden;">
+                            <tr style="width: 720px; overflow: hidden;">
+                                <td height="60" width="100" align="center" style="font-size: 20px;">年份</td>
+                                <td height="60" width="100" align="center" style="font-size: 20px">最高分</td>
+                                <td height="60" width="100" align="center" style="font-size: 20px">平均分</td>
+                                <td height="60" width="100" align="center" style="font-size: 20px">最低分</td>
+                                <td height="60" width="100" align="center" style="font-size: 20px">最低位次</td>
+                                <td height="60" width="100" align="center" style="font-size: 20px">省控线</td>
+                                <td height="60" width="100" align="center" style="font-size: 20px">招生类型</td>
+                                <td height="60" width="100" align="center" style="font-size: 20px">录取批次</td>
+                            </tr>
+                            {% for provinceline in provinceline_list %}
+                                <tr>
+                                    <th height="30">{{ provinceline.year }}</th>
+                                    <th>{{ provinceline.highest_score }}</th>
+                                    <th>{{ provinceline.average_score }}</th>
+                                    <th>{{ provinceline.lowest_score }}</th>
+                                    <th>{{ provinceline.lowest_rank }}</th>
+                                    <th>{{ provinceline.provincial_line }}</th>
+                                    <th>{{ provinceline.admission_type }}</th>
+                                    <th>{{ provinceline.admission_lot }}</th>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
-    <br>
-    
-    
-    <div>
-        <table border="1">
-            <tr>
-                <td>省份</td>
-                <td>最低分</td>
-            </tr>
-            {% for provinceline in other_provinceline %}
-                <tr>
-                    <th>{{ provinceline.province }}</th>
-                    <th>{{ provinceline.score }}</th>
-                </tr>
-            {% endfor %}
-            
-        </table>
+
+
+    <div class="professional_left">
+        <div class="professional_wrap">
+            <div class="professional_item">
+                <div class="left_info_item">
+                    <div class="info_title_box">
+                        <div class="info_title_left">
+                            <p class="title_border"></p>
+                            <span>各省录取最低分数线</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="professional_content">
+                    <table class="professional_table" cellspacing="0" width="800" border="1">
+                        <tbody style="width: 800px; overflow: hidden;">
+                            <tr style="width: 720px; overflow: hidden;">
+                                <td height="60" width="300" align="center" style="font-size: 20px">省份</td>
+                                <td height="60" width="300" align="center" style="font-size: 20px">录取最低分</td>
+                            </tr>
+                            {% for provinceline in other_provinceline %}
+                                <tr>
+                                    <th height="30">{{ provinceline.province }}</th>
+                                    <th>{{ provinceline.score }}</th>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
     </div>
+
+
     
     
 {% endblock %}
