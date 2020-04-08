@@ -5,32 +5,48 @@
 {% endblock %}
 
 {% block headerjs %}
-
+    <link rel="stylesheet" href="/static/professional.css">
 {% endblock %}
 
 {% block main %}
-    <br>
-    <br>
-    <br>
+    <div class="professional_left">
+        <div class="professional_wrap">
+            <div class="professional_item">
+                <div class="left_info_item">
+                    <div class="info_title_box">
+                        <div class="info_title_left">
+                            <p class="title_border"></p>
+                            <span>开设专业</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="professional_content">
+                    <table class="professional_table" cellspacing="0" width="800" border="1">
+                        <tbody style="width: 800px; overflow: hidden;">
+                            <tr style="width: 720px; overflow: hidden;">
+                                <td height="60" width="300" align="center" style="font-size: 20px">类别</td>
+                                <td align="center" style="font-size: 20px">专业名称</td>
+                            </tr>
+                            {% for professional in professional_list %}
+                                <tr>
+                                    <th height="30">{{ professional.special_type }}</th>
+                                    <th>{{ professional.special_detail }}</th>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <div align="center">
-        <table border="1" width="800">
-            <tr>
-                <td height="60" width="300" align="center" style="font-size: 20px">类别</td>
-                <td align="center" style="font-size: 20px">专业名称</td>
-            </tr>
-            {% for professional in professional_list %}
-                <tr>
-                    <th height="30">{{ professional.special_type }}</th>
-                    <th>{{ professional.special_detail }}</th>
-                </tr>
-            {% endfor %}
 
-        </table>
     </div>
-    <br>
-    <br>
-    <br>
+
     <div class="bottom_page" align="center" style="font-size: 20px">
         {% if professional_list.has_previous %}
             <a href="/school/{{ id }}/professional/?page={{ professional_list.previous_page_number }}">上一页</a>
