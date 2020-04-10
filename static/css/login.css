@@ -1,146 +1,118 @@
-.search{
-	width: 980px;
+*{
+    box-sizing: border-box;
 }
-.search .items{
-	left: 505px;
+body{
+    background:url('/static/background.png');
+    transition:background 3s ease;
 }
-.nav{
-	height: 1px;
-	border-bottom: 4px solid #ff464e;
+.title{
+    margin-left: 100px;
+    color:black;
+    margin-top: 30px;
 }
-.login-body{
-	background-color: #f6f6f6;
-	min-height: 650px;
-	padding-top: 20px;
-}
-.login-card{
-	width: 978px;
-	height: 453px;
-	border:1px solid #e2e2e2;
-	background-color:#ffffff ;
-	margin: 0 auto;
-}
-.login-top{
-	height: 64px;
-	border-bottom: 1px solid #e2e2e2;
-}
-.login-top h3,.login-top h5,.login-top h4{
-	display: block;
-	float: left;
-	height: 64px;
-	line-height: 64px;
-}
-.login-top h3{
-	width: 80px;
-	height: 64px;
-	color: #ff464e;
-	font-size: 16px;
-	margin-left: 50px;
-}
-.login-top h5{
-	width: 170px;
-	color: #666666;
-	font-size: 12px;
-	margin-left: 30px;
-}
-.login-top h4{
-	font-size: 16px;
-	margin-left: 460px;
-}
-.login-top h4>a{
-	color:#0289cd;
-}
-.login-input-box{
-	float: left;
-	width: 271px;
-	height: 388px;
-	margin-left: 160px;
-	padding-top: 30px;
-}
-.login-admin, .login-password{
-	/*background-image: url(../images/login_03.png);*/
-	background-size: 39px 38px;
-	background-position:left top;
-	background-repeat: no-repeat;
-	width: 270px;
-	height: 38px;
+#welcome,#register,#login{
+    position: fixed;
+    display:none;
+    width:450px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 30px;
 
-	padding-left: 40px;
-	color:#c8c8c8;
 }
-.login-admin.active{
-	border: 1px solid #ff3838;
+.back{
+    text-align: center;
+    width:50px;
+    height:50px;
+    line-height: 50px;
+    background-color:#F2B3BB;
+    color: white;
+    font-size: 20px;
 }
-.login-password.active{
-	border: 1px solid #ff3838;
+.back:hover{
+    background-color: white;
+    color:#F2B3BB;
 }
-.login-password{
-	/*background-image: url(../images/login_08.png);*/
-	border-color:#c6c6c6;
-	margin-top: 30px;
+.box1{
+    background-color:#A7BFE8 ;
 }
-.checkbox{
-	width: 270px;
-	height: 48px;
-	line-height: 77px;
-	overflow: hidden;
-}
-.login-check{
-	float: left;
-	margin-top: 33px;
-	margin-right: 5px;
-	border: 1px solid #8e8f8f;
+.box1:hover{
+    color:#A7BFE8;
+
 }
 
-.forget{
-	display: block;
-	float: right;
+#welcome{
+    display:block;
+    padding-top: 20px;
+
+}
+input{
+    width:207px;
+    height:37px;
+    line-height: 37px;
+    border-radius: 10px;
+    border:1px solid#F2B3BB ;
+    padding-left:7px;
+}
+h1{
+    color:#F2B3BB;
+    font-weight: bolder;
+}
+.h1{
+    color: #A7BFE8;
+    font-weight: bolder;
+}
+.p1{
+    font-size: 20px;
+}
+button{
+    width:200px;
+    height:53px;
+    border:none;
+    border-radius:20px;
+    color:white;
+    font-size: 20px;
+}
+button:hover{
+    background-color: white;
+}
+#btn1{
+    background-color: #EE9CA7;
+}
+#btn2{
+    background-color:#A7BFE8 ;
+}
+#zhuc{
+    background-color:#A7BFE8 ;
+    border-radius: 20px;
+}
+#denglu{
+    background-color: #EE9CA7;
+    border-radius: 20px;
+}
+.formgroup{
+    margin:15px 0;
+}
+.formcontrol{
+    border-radius: 5px;
+    outline-color:#EE9CA7;
+}
+#register input{
+    border:1px solid #A7BFE8;
+    outline-color:#A7BFE8;
 }
 
-.login-btn{
-	display: block;
-	width: 260px;
-	height: 40px;
-	background-color: #ff4251;
-	color: #fff;
-	border: none;
-	margin: 0 auto;
-	margin-top: 10px;
-	outline: none;
-	text-align: center;
-	line-height: 40px;
-	font-size: 18px;
-}
+.writePass{
+    display: inline-block;
+    margin-top: 10px;
 
-.otherLogin{
-	float: left;
 }
-.otherLogin h4{
-	font-size: 12px;
-	margin-top: 33px;
-}
-.otherLogin .img{
-	margin-top: 7px;
-}
-.otherLogin .img li{
-	float: left;
-}
-.otherLogin .img li img{
-	width: 22px;
-	height: 22px;
-	margin-right: 7px;
-}
-.phonelogin{
-	margin-top: 44px;
-	float: right;
-	padding-left: 17px ;
-	/*background-image: url(../images/login_12.png);*/
-	background-position: left;
-	background-repeat: no-repeat;
-}
-
-.login-img{
-	float: left;
-	margin-top: 30px;
-	margin-left: 120px;
+#man,#woman{
+    width:15px;
+    height:15px;
+    margin-left: 30px;
+    vertical-align: top;
 }

@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4ae71c5d-f7f7-463d-8626-77fb2ac7b916" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/professional.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/professional.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/provinceline.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/provinceline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/carts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/draw_job_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/draw_job_area.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/draw_job_company.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/draw_job_company.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -49,7 +56,29 @@
       <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.bishe">
+    <configuration name="draw_job_company" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bishe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/draw_job_company.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="bishe" type="Python.DjangoServer" factoryName="Django server">
       <module name="bishe" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,6 +103,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.draw_job_company" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -90,7 +124,11 @@
       <workItem from="1586132299554" duration="4784000" />
       <workItem from="1586171305008" duration="21957000" />
       <workItem from="1586263186099" duration="2454000" />
-      <workItem from="1586321221578" duration="423000" />
+      <workItem from="1586321221578" duration="7029000" />
+      <workItem from="1586415481847" duration="106000" />
+      <workItem from="1586416624201" duration="293000" />
+      <workItem from="1586423462655" duration="182000" />
+      <workItem from="1586478898888" duration="12965000" />
     </task>
     <servers />
   </component>
@@ -106,29 +144,36 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="550" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586175508575" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586321840452">
+    <state width="1638" height="427" key="GridCell.Tab.0.bottom" timestamp="1586502100798">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586321840452" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586089305454" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586321840450">
+    <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586502100798" />
+    <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586349060678" />
+    <state width="1638" height="427" key="GridCell.Tab.0.center" timestamp="1586502100797">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586321840450" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586089305453" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586321840449">
+    <state width="1638" height="427" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586502100797" />
+    <state width="1638" height="427" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586349060674" />
+    <state width="1638" height="427" key="GridCell.Tab.0.left" timestamp="1586502100797">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586321840449" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586089305453" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586321840451">
+    <state width="1638" height="427" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586502100797" />
+    <state width="1638" height="427" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586349060673" />
+    <state width="1638" height="427" key="GridCell.Tab.0.right" timestamp="1586502100798">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586321840451" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586089305454" />
+    <state width="1638" height="427" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586502100798" />
+    <state width="1638" height="427" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586349060677" />
     <state x="341" y="164" key="SettingsEditor" timestamp="1586138999267">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586138999267" />
+    <state x="498" y="282" width="683" height="486" key="find.popup" timestamp="1586502557156">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586502557156" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bishe$draw_job_company.coverage" NAME="draw_job_company Coverage Results" MODIFIED="1586483475081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
 </project>

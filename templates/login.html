@@ -2,34 +2,217 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登陆页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆注册</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/login.css" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background:url('/static/background.png');
+            transition:background 3s ease;
+        }
+        .title{
+            margin-left: 100px;
+            color:black;
+            margin-top: 30px;
+        }
+        #welcome,#register,#login{
+            position: fixed;
+            display:none;
+            width:450px;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            padding-bottom: 30px;
+
+        }
+        .back{
+            text-align: center;
+            width:50px;
+            height:50px;
+            line-height: 50px;
+            background-color:#F2B3BB;
+            color: white;
+            font-size: 20px;
+        }
+        .back:hover{
+            background-color: white;
+            color:#F2B3BB;
+        }
+        .box1{
+            background-color:#A7BFE8 ;
+        }
+        .box1:hover{
+            color:#A7BFE8;
+
+        }
+
+        #welcome{
+            display:block;
+            padding-top: 20px;
+
+        }
+        input{
+            width:207px;
+            height:37px;
+            line-height: 37px;
+            border-radius: 10px;
+            border:1px solid#F2B3BB ;
+            padding-left:7px;
+        }
+        h1{
+            color:#F2B3BB;
+            font-weight: bolder;
+        }
+        .h1{
+            color: #A7BFE8;
+            font-weight: bolder;
+        }
+        .p1{
+            font-size: 20px;
+        }
+        button{
+            width:200px;
+            height:53px;
+            border:none;
+            border-radius:20px;
+            color:white;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: white;
+        }
+        #btn1{
+            background-color: #EE9CA7;
+        }
+        #btn2{
+            background-color:#A7BFE8 ;
+        }
+        #zhuc{
+            background-color:#A7BFE8 ;
+            border-radius: 20px;
+        }
+        #denglu{
+            background-color: #EE9CA7;
+            border-radius: 20px;
+        }
+        .formgroup{
+            margin:15px 0;
+        }
+        .formcontrol{
+            border-radius: 5px;
+            outline-color:#EE9CA7;
+        }
+        #register input{
+            border:1px solid #A7BFE8;
+            outline-color:#A7BFE8;
+        }
+
+        .writePass{
+            display: inline-block;
+            margin-top: 10px;
+
+        }
+        #man,#woman{
+            width:15px;
+            height:15px;
+            margin-left: 30px;
+            vertical-align: top;
+        }
+
+    </style>
 </head>
-<style>
-    div {
-    display: block;
-    }
-
-    .login_wrap {
-    width: 100%;
-    height: 100%;
-    background: url(/media/background.png) no-repeat;
-    position: relative;
-    background-size: 100% auto;
-    }
-
-    .login_wrap .login_box .login_title {
-    font-size: 28px;
-    font-family: MicrosoftYaHei;
-    color: #333;
-    text-align: center;
-    margin: 25px 0 43px 0;
-    }
-</style>
 <body>
-    <div class="login_wrap">
-        <div class="login_box"></div>
-            <div class="login_title">登陆</div>
-            <input type="number" class="phone" placeholder="手机号">
+
+<h1 class="title">欢迎来到智慧养老管理平台!</h1>
+<div id="welcome">
+    <h1>欢迎光临</h1>
+    <p class="p1">欢迎进入登录页面</p>
+    <p><button id="btn1">登录</button></p>
+    <p><button id="btn2">注册</button></p>
+</div>
+
+<div id="register">
+    <div class="back box1">
+        <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
+    <h1 class="h1">注册</h1>
+    <form method="post" action="/school/login/">
+        {% csrf_token %}
+        <div class="formgroup">
+            <input class="formcontrol" name="user_name" type="text" placeholder="用户名：真实姓名" required="required"/>
+        </div>
+        <div class="formgroup">
+            <input class="formcontrol" name="user_password" type="password" placeholder="密码：" required="required"/>
+        </div>
+        <div class="formgroup">
+            <input class="formcontrol" name="user_email" type="text" placeholder="邮箱：" required="required"/>
+        </div>
+        <div class="formgroup">
+            <input class="formcontrol" name="user_sex" type="text" placeholder="性别：男/女" required="required"/>
+        </div>
+        <div class="formgroup">
+            <input class="formcontrol" name="user_birth" type="date" placeholder="出生日期:" required="required"/>
+        </div>
+        <div class="formgroup">
+            <input class="formcontrol" name="user_phone" type="text" placeholder="电话：" required="required"/>
+        </div>
+        <button id="zhuce" type="submit" name="register">注册</button>
+    </form>
+</div>
+
+<div id="login">
+    <div class="back">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <h1>欢迎登录</h1>
+    <form method="post" action="/school/login/">
+        {% csrf_token %}
+        <div class="formgroup">
+            <input class="formcontrol" type="text" name="user_name" placeholder="用户名" required="required"/>
+        </div>
+        <div class="formgroup">
+            <input class="formcontrol" name="user_password" type="password" placeholder="密码" required="required"/>
+        </div>
+        <button id="denglu" type="submit" name="login">登录</button>
+    </form>
+     <a href="/password" class="writePass">忘记密码？</a>
+</div>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(()=>{
+        {#$("input").val("");#}
+        $("#btn2").click(()=>{
+            {#$("input").val("");#}
+        $("#welcome").hide();
+    $("#register").slideDown();
+    $("#login").hide();
+
+    });
+    $("#btn1").click(()=>{
+        {#$("input").val("");#}
+        $("#welcome").hide();
+    $("#login").slideDown();
+    $("#register").hide();
+
+    });
+    $(".back").click(()=>{
+        {#$("input").val("");#}
+        $("#welcome").slideDown();
+    $("#login").hide();
+    $("#register").hide();
+
+    });
+    });
+
+
+</script>
 </body>
 </html>

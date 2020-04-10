@@ -60,6 +60,21 @@ class SchoolContractArea(models.Model):
         db_table = 'school_contract_area'
 
 
+class SchoolJobrate(models.Model):
+    school_id = models.IntegerField(primary_key=True)
+    job = models.CharField(max_length=255, blank=True, null=True)
+    postgraduate = models.CharField(max_length=255, blank=True, null=True)
+    abroad = models.CharField(max_length=255, blank=True, null=True)
+    female_num = models.CharField(max_length=255, blank=True, null=True)
+    men_num = models.CharField(max_length=255, blank=True, null=True)
+    men_rate = models.CharField(max_length=255, blank=True, null=True)
+    female_rate = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'school_jobrate'
+
+
 class SchoolLowestScore(models.Model):
     school_id = models.IntegerField(blank=True, null=True)
     province = models.CharField(max_length=255, blank=True, null=True)
@@ -69,6 +84,7 @@ class SchoolLowestScore(models.Model):
     class Meta:
         managed = False
         db_table = 'school_lowest_score'
+        unique_together = (('school_id', 'province'),)
 
 
 class SchoolProvinceline(models.Model):
