@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登陆注册</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/login.css" rel="stylesheet">
     <style>
         *{
             box-sizing: border-box;
@@ -187,6 +186,26 @@
 
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script>
+    function register(){
+        //获取输入框内的值
+        var account = $('#uname').val();
+        var password = $('#pwd').val();
+
+        //简单的校验
+        if(account.length<6||!isEmail(account)){
+            $('#aSpan').text('邮箱长度不能小于六位');
+            return false;
+        }
+
+        if(password.length<6){
+            $('#aSpan').text('密码长度不能小于六位');
+            return false;
+        }
+
+        hex_pwd = hex_md5(password);
+        $('#password').val(hex_pwd)
+    }
+
     $(()=>{
         {#$("input").val("");#}
         $("#btn2").click(()=>{
