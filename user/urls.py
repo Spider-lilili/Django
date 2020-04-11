@@ -21,6 +21,10 @@ from . import views
 urlpatterns = [
     re_path('^login/$', views.LoginView.as_view()),
     re_path('^checkname/$', views.Checkname.as_view()),
+    re_path('^center/$', views.CenterView.as_view()),
+    re_path('^logout/$', views.LogoutView.as_view()),
+    re_path('^loadcode/$', views.LoadCodeView.as_view()),
+    re_path('^checkcode/$', views.CheckCodeView.as_view()),
 ]
 
 

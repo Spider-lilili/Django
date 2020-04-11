@@ -2,14 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae71c5d-f7f7-463d-8626-77fb2ac7b916" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/Arial.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/mycontentprocessors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/code.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bishe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bishe/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bishe/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bishe/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/allschool.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/allschool.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/10_vonnLjk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/1_mpwtoGA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/2_UuQkY4b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/3_ViMgWv6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/4_BDmgdFv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/5_ozWIsej.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/6_Pny8yTQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/7_K4tB09L.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/8_60MJMwS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/9_8YomGSk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/B5_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/bai_mt1VrH5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/hei_kYyKPNv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/hei_rFOWelp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/hong_Dm4fQ6U.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/hong_y7wQwRw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/hong_zHPXVqY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/huang_bvCMlhn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/hui.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/ju.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lan_BKQdpOj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lan_ELubwxG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lan_IThSO4Z.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/login_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lv_H5hkmmq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lv_cTMJg2K.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/lv_sxlJZTq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/md5-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/md5-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/center.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +61,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,12 +83,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/fonts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/fonts" />
+      <recent name="$PROJECT_DIR$/utils" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static" />
@@ -126,7 +168,8 @@
       <workItem from="1586415481847" duration="106000" />
       <workItem from="1586416624201" duration="293000" />
       <workItem from="1586423462655" duration="182000" />
-      <workItem from="1586478898888" duration="17938000" />
+      <workItem from="1586478898888" duration="40515000" />
+      <workItem from="1586602298807" duration="584000" />
     </task>
     <servers />
   </component>
@@ -134,42 +177,50 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="190" key="#Inspections" timestamp="1586175491109">
+    <state x="440" y="190" key="#Inspections" timestamp="1586591841060">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="190" key="#Inspections/0.0.1680.1050@0.0.1680.1050" timestamp="1586175491109" />
+    <state x="440" y="190" key="#Inspections/0.0.1680.1050@0.0.1680.1050" timestamp="1586591841060" />
     <state x="550" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586175508575">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="550" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586175508575" />
-    <state width="1638" height="427" key="GridCell.Tab.0.bottom" timestamp="1586577535369">
+    <state width="1638" height="427" key="GridCell.Tab.0.bottom" timestamp="1586602237264">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586577535369" />
+    <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586602237264" />
     <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586349060678" />
-    <state width="1638" height="427" key="GridCell.Tab.0.center" timestamp="1586577535368">
+    <state width="1638" height="427" key="GridCell.Tab.0.center" timestamp="1586602237263">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586577535368" />
+    <state width="1638" height="427" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586602237263" />
     <state width="1638" height="427" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586349060674" />
-    <state width="1638" height="427" key="GridCell.Tab.0.left" timestamp="1586577535367">
+    <state width="1638" height="427" key="GridCell.Tab.0.left" timestamp="1586602237263">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586577535367" />
+    <state width="1638" height="427" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586602237263" />
     <state width="1638" height="427" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586349060673" />
-    <state width="1638" height="427" key="GridCell.Tab.0.right" timestamp="1586577535369">
+    <state width="1638" height="427" key="GridCell.Tab.0.right" timestamp="1586602237264">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586577535369" />
+    <state width="1638" height="427" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586602237264" />
     <state width="1638" height="427" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586349060677" />
-    <state x="341" y="164" key="SettingsEditor" timestamp="1586138999267">
+    <state x="341" y="164" key="SettingsEditor" timestamp="1586597038476">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586138999267" />
-    <state x="498" y="282" width="683" height="486" key="find.popup" timestamp="1586502557156">
+    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586597038476" />
+    <state x="-960" y="121" width="960" height="663" maximized="true" key="dock-window-1" timestamp="1586580233229">
+      <screen x="-960" y="107" width="960" height="681" />
+    </state>
+    <state x="-960" y="121" width="960" height="663" maximized="true" key="dock-window-1/-960.107.960.681/0.23.1680.954@0.23.1680.954" timestamp="1586580233229" />
+    <state x="-960" y="107" width="960" height="681" key="dock-window-2" timestamp="1586580233230">
+      <screen x="-960" y="107" width="960" height="681" />
+    </state>
+    <state x="-960" y="107" width="960" height="681" key="dock-window-2/-960.107.960.681/0.23.1680.954@0.23.1680.954" timestamp="1586580233230" />
+    <state x="498" y="282" width="683" height="486" key="find.popup" timestamp="1586592447446">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586502557156" />
+    <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586592447446" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bishe$draw_job_company.coverage" NAME="draw_job_company Coverage Results" MODIFIED="1586483475081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

@@ -4,7 +4,7 @@ from django.db import models
 
 
 class UserInfo(models.Model):
-    nickname = models.CharField(max_length=100)
+    nickname = models.CharField(max_length=100, unique=True)
     password = models.CharField(max_length=100)
     email = models.EmailField(max_length=50)
     sex = models.CharField(max_length=50)

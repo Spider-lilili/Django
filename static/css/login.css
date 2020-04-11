@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background:url('/static/background.png');
+    transition:background 3s ease;
+}
+.title{
+    margin-left: 100px;
+    color:black;
+    margin-top: 30px;
+}
+.back{
+    text-align: center;
+    width:50px;
+    height:50px;
+    line-height: 50px;
+    background-color:#F2B3BB;
+    color: white;
+    font-size: 20px;
+}
+.back:hover{
+    background-color: white;
+    color:#F2B3BB;
+}
+.box1{
+    background-color:#A7BFE8 ;
+}
+.box1:hover{
+    color:#A7BFE8;
+
+}
+
+
+input{
+    width:207px;
+    height:37px;
+    line-height: 37px;
+    border-radius: 10px;
+    border:1px solid#F2B3BB ;
+    padding-left:7px;
+}
+select{
+    width:207px;
+    height:37px;
+    line-height: 37px;
+    border-radius: 10px;
+    border:1px solid#F2B3BB ;
+    padding-left:7px;
+}
+h1{
+    color:#F2B3BB;
+    font-weight: bolder;
+}
+.h1{
+    color: #A7BFE8;
+    font-weight: bolder;
+}
+.p1{
+    font-size: 20px;
+}
+button{
+    width:200px;
+    height:53px;
+    border:none;
+    border-radius:20px;
+    color:white;
+    font-size: 20px;
+}
+button:hover{
+    background-color: white;
+}
+.formgroup{
+    margin:15px 0;
+}
+.formgroup1{
+    margin-left: 55px;
+    margin-top: 10px;
+}
+.formcontrol{
+    border-radius: 5px;
+    outline-color:#EE9CA7;
+}
+.writePass{
+    display: inline-block;
+    margin-top: 10px;
+
+}

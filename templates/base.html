@@ -12,6 +12,7 @@
 {#    <link rel="stylesheet" href="/static/detail.css">#}
     <link rel="stylesheet" href="/static/reset.css">
     <link rel="stylesheet" href="/static/mygxin.css">
+    <link rel="stylesheet" href="/static/base.css">
     <script src="/static/jquery.min.js"></script>
     <script src="/static/carts.js"></script>
 
@@ -24,19 +25,27 @@
 
 <body>
 
-
-    <div class="head">
+    {% csrf_token %}
+    {% if suser != None %}
+        <div class="dropdown">
+            <span>guoli</span>
+            <div class="dropdown-content">
+                <span>个人中心</span>
+                <a class="logout">退出登录</a>
+            </div>
+        </div>
+    {% else %}
+        <div class="head">
         <div class="head-in">
             <div class="register">
-                <a href="/school/login/">免费注册</a>
+                <a href="/login/">免费注册</a>
             </div>
             <div class="sign">
-                <a href="/school/login/">登录</a>
+                <a href="/login/">登录</a>
             </div>
-
-
         </div>
     </div>
+    {% endif %}
     <div class="search">
 
         <div class="input">
@@ -123,6 +132,22 @@
     {% block footerjs %}
 
     {% endblock %}
+
+<script>
+    $('.logout').click(function () {
+        $.ajax({
+            type:'post',
+            url:'/logout/',
+            data:'csrfmiddlewaretoken='+$('input[name="csrfmiddlewaretoken"]').val(),
+            success: function (result) {
+                if(result.delflag){
+                    window.location.href='/login/'
+                }
+
+            }
+        })
+    })
+</script>
 
 
 </body>

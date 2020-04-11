@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登陆注册</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/login.css" rel="stylesheet">
+    <script type="text/javascript" src="/static/md5-min.js"></script>
     <style>
-        *{
-            box-sizing: border-box;
-        }
-        body{
-            background:url('/static/background.png');
-            transition:background 3s ease;
-        }
-        .title{
-            margin-left: 100px;
-            color:black;
-            margin-top: 30px;
-        }
         #welcome,#register,#login{
             position: fixed;
             display:none;
@@ -29,63 +19,10 @@
             border-radius: 5px;
             text-align: center;
             padding-bottom: 30px;
-
         }
-        .back{
-            text-align: center;
-            width:50px;
-            height:50px;
-            line-height: 50px;
-            background-color:#F2B3BB;
-            color: white;
-            font-size: 20px;
-        }
-        .back:hover{
-            background-color: white;
-            color:#F2B3BB;
-        }
-        .box1{
-            background-color:#A7BFE8 ;
-        }
-        .box1:hover{
-            color:#A7BFE8;
-
-        }
-
         #welcome{
             display:block;
             padding-top: 20px;
-
-        }
-        input{
-            width:207px;
-            height:37px;
-            line-height: 37px;
-            border-radius: 10px;
-            border:1px solid#F2B3BB ;
-            padding-left:7px;
-        }
-        h1{
-            color:#F2B3BB;
-            font-weight: bolder;
-        }
-        .h1{
-            color: #A7BFE8;
-            font-weight: bolder;
-        }
-        .p1{
-            font-size: 20px;
-        }
-        button{
-            width:200px;
-            height:53px;
-            border:none;
-            border-radius:20px;
-            color:white;
-            font-size: 20px;
-        }
-        button:hover{
-            background-color: white;
         }
         #btn1{
             background-color: #EE9CA7;
@@ -101,35 +38,16 @@
             background-color: #EE9CA7;
             border-radius: 20px;
         }
-        .formgroup{
-            margin:15px 0;
-        }
-        .formcontrol{
-            border-radius: 5px;
-            outline-color:#EE9CA7;
-        }
         #register input{
             border:1px solid #A7BFE8;
             outline-color:#A7BFE8;
-        }
-
-        .writePass{
-            display: inline-block;
-            margin-top: 10px;
-
-        }
-        #man,#woman{
-            width:15px;
-            height:15px;
-            margin-left: 30px;
-            vertical-align: top;
         }
 
     </style>
 </head>
 <body>
 
-<h1 class="title">欢迎来到中国教育网!</h1>
+{#<h1 class="title">欢迎来到中国教育网!</h1>#}
 <div id="welcome">
     <h1>欢迎光临</h1>
     <p class="p1">欢迎进入登录页面</p>
@@ -142,25 +60,39 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
     <h1 class="h1">注册</h1>
-    <form method="post" action="/login/">
+    <form method="post" action="/login/" onsubmit="return register1();">
         {% csrf_token %}
         <div class="formgroup">
-            <input class="formcontrol" name="user_name" type="text" placeholder="用户名：真实姓名" required="required"/>
+            <label for="user_name">用户名&emsp;：</label>
+            <input class="formcontrol" id="user_name" name="user_name" type="text" placeholder="用户名：" onblur="checkname(this.value)" required="required"/>
+            <span style="color: red;" id="aSpan"></span>
         </div>
         <div class="formgroup">
-            <input class="formcontrol" name="user_password" type="password" placeholder="密码：" required="required"/>
+            <label for="user_password">密&emsp;码&emsp;：</label>
+            <input class="formcontrol" id="user_password" name="user_password" type="password" placeholder="密码：" required="required"/>
+            <span style="color: red;" id="pSpan"></span>
         </div>
         <div class="formgroup">
-            <input class="formcontrol" name="user_email" type="text" placeholder="邮箱：" required="required"/>
+            <label for="user_email">邮&emsp;箱&emsp;：</label>
+            <input class="formcontrol" id="user_email" name="user_email" type="text" placeholder="邮箱：" required="required"/>
+            <span style="color: red;" id="eSpan"></span>
         </div>
         <div class="formgroup">
-            <input class="formcontrol" name="user_sex" type="text" placeholder="性别：男/女" required="required"/>
+            <label for="user_sex">性&emsp;别&emsp;：</label>
+            <select class="formcontrol" id="user_sex" name="user_sex">
+                <option>---请选择你的性别---</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+{#            <input class="formcontrol" id="user_sex" name="user_sex" type="text" placeholder="性别：男/女" required="required"/>#}
         </div>
         <div class="formgroup">
-            <input class="formcontrol" name="user_birth" type="date" placeholder="出生日期:" required="required"/>
+            <label for="user_birth">出生日期：</label>
+            <input class="formcontrol" id="user_birth" name="user_birth" type="date" placeholder="出生日期:" required="required"/>
         </div>
         <div class="formgroup">
-            <input class="formcontrol" name="user_phone" type="text" placeholder="电话：" required="required"/>
+            <label for="user_phone">手机号码：</label>
+            <input class="formcontrol" id="user_phone" name="user_phone" type="text" placeholder="电话：" required="required"/>
         </div>
         <button id="zhuce" type="submit" name="register">注册</button>
     </form>
@@ -171,90 +103,53 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
     <h1>欢迎登录</h1>
-    <form method="post" action="/login/">
+    <form method="post" action="/login/" onsubmit="return login1();">
         {% csrf_token %}
         <div class="formgroup">
-            <input class="formcontrol" type="text" name="user_name" placeholder="用户名" required="required"/>
+            <label for="user_name">用户名：</label>
+            <input class="formcontrol" id="user_name" type="text" name="user_name" placeholder="用户名" required="required"/>
+            <span style="color:red;" id="aSpan"></span>
         </div>
         <div class="formgroup">
-            <input class="formcontrol" name="user_password" type="password" placeholder="密码" required="required"/>
+            <label for="pwd">密&emsp;码：</label>
+            <input class="formcontrol" id="pwd" name="pwd" type="password" placeholder="密码" required="required"/>
+            <span style="color:red;" id="pSpan"></span>
         </div>
+        <div class="formgroup1">
+            <label for="code">验证码：</label>
+            <input type="text" style="height:36px;width: 100px;" id="code" onblur="checkCode(this.value)">
+            <img src="/loadcode/" onclick="changecode(this)">
+            <span style="color:red;" id="cSpan"></span>
+        </div>
+
         <button id="denglu" type="submit" name="login">登录</button>
     </form>
      <a href="/password" class="writePass">忘记密码？</a>
 </div>
 
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="/static/login.js"></script>
 <script>
-    //邮箱判断
-    function isEmail(str) {
-        var reg = /^[a-zA-Z0-9_-]{6,}@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-        return reg.test(str);
-    }
-
-    //判断用户名是否已存在
-    function checkname(username) {
-        flag = true;
-        $.ajax({
-            url:'/school/checkname/',
-            type:"GET",
-            async:false,
-            data:{'uname':username},
-            success: function (result) {
-                alert(result)
-
-            }
-        })
-        return flag;
-    }
-
-
-    function register(){
-        //获取输入框内的值
-        var account = $('#uname').val();
-        var password = $('#pwd').val();
-
-        //简单的校验
-        if(account.length<6||!isEmail(account)){
-            $('#aSpan').text('邮箱长度不能小于六位');
-            return false;
-        }
-
-        if(password.length<6){
-            $('#aSpan').text('密码长度不能小于六位');
-            return false;
-        }
-
-        //将密码进行加密
-        hex_pwd = hex_md5(password);
-        $('#password').val(hex_pwd);
-        return true;
-    }
-
     $(()=>{
-        {#$("input").val("");#}
-        $("#btn2").click(()=>{
-            {#$("input").val("");#}
-        $("#welcome").hide();
-    $("#register").slideDown();
-    $("#login").hide();
+    $("#btn2").click(()=>{
+    $("#welcome").hide();
+$("#register").slideDown();
+$("#login").hide();
 
-    });
-    $("#btn1").click(()=>{
-        {#$("input").val("");#}
-        $("#welcome").hide();
-    $("#login").slideDown();
-    $("#register").hide();
+});
+$("#btn1").click(()=>{
+    $("#welcome").hide();
+$("#login").slideDown();
+$("#register").hide();
 
-    });
-    $(".back").click(()=>{
-        {#$("input").val("");#}
-        $("#welcome").slideDown();
-    $("#login").hide();
-    $("#register").hide();
+});
+$(".back").click(()=>{
+    $("#welcome").slideDown();
+$("#login").hide();
+$("#register").hide();
 
-    });
-    });
+});
+});
 
 
 </script>
