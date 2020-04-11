@@ -148,3 +148,6 @@ class SchoolUnitNature(models.Model):
     class Meta:
         managed = False
         db_table = 'school_unit_nature'
+
+
+

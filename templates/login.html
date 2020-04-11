@@ -93,7 +93,7 @@
         #btn2{
             background-color:#A7BFE8 ;
         }
-        #zhuc{
+        #zhuce{
             background-color:#A7BFE8 ;
             border-radius: 20px;
         }
@@ -129,7 +129,7 @@
 </head>
 <body>
 
-<h1 class="title">欢迎来到智慧养老管理平台!</h1>
+<h1 class="title">欢迎来到中国教育网!</h1>
 <div id="welcome">
     <h1>欢迎光临</h1>
     <p class="p1">欢迎进入登录页面</p>
@@ -142,7 +142,7 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
     <h1 class="h1">注册</h1>
-    <form method="post" action="/school/login/">
+    <form method="post" action="/login/">
         {% csrf_token %}
         <div class="formgroup">
             <input class="formcontrol" name="user_name" type="text" placeholder="用户名：真实姓名" required="required"/>
@@ -171,7 +171,7 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
     <h1>欢迎登录</h1>
-    <form method="post" action="/school/login/">
+    <form method="post" action="/login/">
         {% csrf_token %}
         <div class="formgroup">
             <input class="formcontrol" type="text" name="user_name" placeholder="用户名" required="required"/>
@@ -186,6 +186,29 @@
 
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script>
+    //邮箱判断
+    function isEmail(str) {
+        var reg = /^[a-zA-Z0-9_-]{6,}@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        return reg.test(str);
+    }
+
+    //判断用户名是否已存在
+    function checkname(username) {
+        flag = true;
+        $.ajax({
+            url:'/school/checkname/',
+            type:"GET",
+            async:false,
+            data:{'uname':username},
+            success: function (result) {
+                alert(result)
+
+            }
+        })
+        return flag;
+    }
+
+
     function register(){
         //获取输入框内的值
         var account = $('#uname').val();
@@ -202,8 +225,10 @@
             return false;
         }
 
+        //将密码进行加密
         hex_pwd = hex_md5(password);
-        $('#password').val(hex_pwd)
+        $('#password').val(hex_pwd);
+        return true;
     }
 
     $(()=>{

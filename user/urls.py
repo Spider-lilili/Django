@@ -16,14 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 
-from bishe.settings import DEBUG, MEDIA_ROOT
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    re_path('^school/', include('school.urls')),
-    re_path('^', include('user.urls')),
+    re_path('^login/$', views.LoginView.as_view()),
+    re_path('^checkname/$', views.Checkname.as_view()),
 ]
 
-if DEBUG:
-    from django.views.static import serve
-    urlpatterns.append(re_path(r'media/(.*)',serve, kwargs={'document_root':MEDIA_ROOT}))
+

@@ -15,7 +15,6 @@ from . import views
 
 urlpatterns = [
     re_path('^$', views.IndexView.as_view()),
-    re_path('^login/$', views.LoginView.as_view()),
     re_path('^(\d+)/$', views.SchoolBase.as_view()),
     re_path('^(\d+)/professional/$', views.ProfessionalView.as_view()),
     re_path('^(\d+)/provinceline/$', views.ProvincelineView.as_view()),
