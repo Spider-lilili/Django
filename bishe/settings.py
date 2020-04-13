@@ -177,4 +177,6 @@ EMAIL_HOST_USER = 'gl986361369@163.com'
 EMAIL_HOST_PASSWORD = 'guoli123'
 EMAIL_FROM = 'gl986361369@163.com'
 
+LOGIN_URL = '/login/'
+
 # global_settings

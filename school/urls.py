@@ -7,8 +7,8 @@
     @Description : 
 """
 
-from django.contrib import admin
-from django.urls import path, re_path, include
+from django.contrib.auth.decorators import login_required
+from django.urls import path, re_path
 
 from . import views
 

@@ -26,9 +26,10 @@
 <body>
 
     {% csrf_token %}
-    {% if suser != None %}
+{#    {% if user != None %}#}
+    {% if user.is_authenticated %}
         <div class="dropdown">
-            <span>guoli</span>
+            <span>欢迎您，{{ user.username }}</span>
             <div class="dropdown-content">
                 <span>个人中心</span>
                 <a class="logout">退出登录</a>
