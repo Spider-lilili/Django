@@ -34,18 +34,31 @@
                                 <td height="60" width="100" align="center" style="font-size: 20px">招生类型</td>
                                 <td height="60" width="100" align="center" style="font-size: 20px">录取批次</td>
                             </tr>
-                            {% for provinceline in provinceline_list %}
+                            {% if provinceline_list %}
+                                {% for provinceline in provinceline_list %}
+                                    <tr>
+                                        <th height="30">{{ provinceline.year }}</th>
+                                        <th>{{ provinceline.highest_score }}</th>
+                                        <th>{{ provinceline.average_score }}</th>
+                                        <th>{{ provinceline.lowest_score }}</th>
+                                        <th>{{ provinceline.lowest_rank }}</th>
+                                        <th>{{ provinceline.provincial_line }}</th>
+                                        <th>{{ provinceline.admission_type }}</th>
+                                        <th>{{ provinceline.admission_lot }}</th>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
                                 <tr>
-                                    <th height="30">{{ provinceline.year }}</th>
-                                    <th>{{ provinceline.highest_score }}</th>
-                                    <th>{{ provinceline.average_score }}</th>
-                                    <th>{{ provinceline.lowest_score }}</th>
-                                    <th>{{ provinceline.lowest_rank }}</th>
-                                    <th>{{ provinceline.provincial_line }}</th>
-                                    <th>{{ provinceline.admission_type }}</th>
-                                    <th>{{ provinceline.admission_lot }}</th>
+                                    <th height="30">--</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                    <th>--</th>
+                                    <th>--</th>
                                 </tr>
-                            {% endfor %}
+                            {% endif %}
                         </tbody>
 
                     </table>

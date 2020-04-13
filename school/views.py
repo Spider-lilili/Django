@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
+from django.contrib.auth.decorators import login_required
+
 from django.http import HttpResponseRedirect
 
 # Create your views here.
@@ -34,7 +36,6 @@ class IndexView(View):
         else:
             schools = get_page(school_info, page, 10)
             return render(request, 'index.html', {"schools": schools, "id": id, "index": True})
-
 
 class SchoolBase(View):
     def get(self, request, id=459):

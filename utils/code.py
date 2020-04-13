@@ -24,7 +24,8 @@ def gene_text():
     # source = list(string.letters)
     # for index in range(0,10):
     #     source.append(str(index))
-    source = ['0','1','2','3','4','5','6','7','8','9']
+    source = ['0','1','2','3','4','5','6','7','8','9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I','J',
+              'K','L', 'M', 'N','O','P','Q','R', 'S', 'T', 'U', 'V', 'W', 'Z','X', 'Y']
     # source = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I','J', 'K','L', 'M', 'N','O','P','Q','R',
     #           'S', 'T', 'U', 'V', 'W', 'Z','X', 'Y']
     return ''.join(random.sample(source,number))#number是生成验证码的位数
@@ -58,4 +59,4 @@ def gene_code():
     bytes = BytesIO() # 内存
     image.save(bytes,format='png')  # 保存验证码图片
 
-    return bytes.getvalue(),text # 获得二进制数据,
+    return bytes.getvalue(),text.lower() # 获得二进制数据,

@@ -17,6 +17,7 @@ from django.conf import global_settings
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+AUTH_USER_MODEL = 'user.UserProfile'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -154,5 +155,26 @@ CACHES = {
         "LOCATION": "redis://127.0.0.1:6379/1"
     }
 }
+
+LOGIN_URL = '/login/'
+
+# 富文本编辑器配置
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': 'advanced',
+    'width': 600,
+    'height': 400,
+}
+
+
+# 发送邮件配置
+BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# Host for sending email.
+EMAIL_HOST = 'smtp.163.com'
+# Port for sending email.
+EMAIL_PORT = 25
+# Optional SMTP authentication information for EMAIL_HOST.
+EMAIL_HOST_USER = 'gl986361369@163.com'
+EMAIL_HOST_PASSWORD = 'guoli123'
+EMAIL_FROM = 'gl986361369@163.com'
 
 # global_settings

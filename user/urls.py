@@ -25,6 +25,7 @@ urlpatterns = [
     re_path('^logout/$', views.LogoutView.as_view()),
     re_path('^loadcode/$', views.LoadCodeView.as_view()),
     re_path('^checkcode/$', views.CheckCodeView.as_view()),
+    re_path('^active/(?P<token>.*)$', views.ActiveView.as_view()),
 ]
 
 
