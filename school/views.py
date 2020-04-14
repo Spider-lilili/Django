@@ -62,7 +62,7 @@ class ProvincelineView(View):
         base_info = SchoolRank.objects.filter(school_id=id).first()
         provinceline_list = SchoolProvinceline.objects.filter(school_id=id).order_by('id')
         other_provinceline = SchoolLowestScore.objects.filter(school_id=id).order_by('id')
-        return render(request, 'provinceline.html', {"id": id, "provinceline_list": provinceline_list,"other_provinceline":other_provinceline, "school": school_info, "base_info": base_info})
+        return render(request, 'provinceline.html', {"id": id, "provinceline_list": provinceline_list, "other_provinceline":other_provinceline, "school": school_info, "base_info": base_info})
 
 
 class Job_area(View):
@@ -91,3 +91,12 @@ class CommentView(View):
         else:
             schools = get_page(comment_list, 1, num=10)
             return render(request, 'school_comment.html', {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
+
+
+class SearchView(View):
+    def post(self, request):
+        school_name = request.POST.get('search','')
+        if school_name:
+            base_info = SchoolRank.objects.filter(school_name=school_name).first()
+            school_info = SchoolBaseInfo.objects.filter(school_id=base_info.school_id).first()
+            return render(request, 'school_base_info.html', {"school": school_info, "base_info": base_info})

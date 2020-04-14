@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block title %}
+    首页
+{% endblock %}
+
+{% block headerjs %}
+    <link href="/static/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/static/jquery.min1.js"></script>
+    <script type="text/javascript" src="/static/current.js"></script>
+{% endblock %}
+
+
+{% block main %}
+    <div class="cation-content">
+        <div class="cation-middle">
+            <dl class="cation-list">
+                <dt>所属地区</dt>
+                <dd>
+                    <a href="#" rel="" name="province" class="all on">全部</a>
+                    <a href="#" rel="北京" name="province" class="default">北京</a>
+                    <a href="#" rel="天津" name="province" class="default">天津</a>
+                    <a href="#" rel="河北" name="province" class="default">河北</a>
+                    <a href="#" rel="河南" name="province" class="default">河南</a>
+                    <a href="#" rel="山东" name="province" class="default">山东</a>
+                    <a href="#" rel="山西" name="province" class="default">山西</a>
+                    <a href="#" rel="陕西" name="province" class="default">陕西</a>
+                    <a href="#" rel="内蒙古" name="province" class="default">内蒙古</a>
+                    <a href="#" rel="辽宁" name="province" class="default">辽宁</a>
+                    <a href="#" rel="吉林" name="province" class="default">吉林</a>
+                    <a href="#" rel="黑龙江" name="province" class="default">黑龙江</a>
+                    <a href="#" rel="上海" name="province" class="default">上海</a>
+                    <a href="#" rel="江苏" name="province" class="default">江苏</a>
+                    <a href="#" rel="安徽" name="province" class="default">安徽</a>
+                    <a href="#" rel="江西" name="province" class="default">江西</a>
+                    <a href="#" rel="湖北" name="province" class="default">湖北</a>
+                    <a href="#" rel="湖南" name="province" class="default">湖南</a>
+                    <a href="#" rel="重庆" name="province" class="default">重庆</a>
+                    <a href="#" rel="四川" name="province" class="default">四川</a>
+                    <a href="#" rel="贵州" name="province" class="default">贵州</a>
+                    <a href="#" rel="云南" name="province" class="default">云南</a>
+                    <a href="#" rel="广东" name="province" class="default">广东</a>
+                    <a href="#" rel="广西" name="province" class="default">广西</a>
+                    <a href="#" rel="福建" name="province" class="default">福建</a>
+                    <a href="#" rel="甘肃" name="province" class="default">甘肃</a>
+                    <a href="#" rel="宁夏" name="province" class="default">宁夏</a>
+                    <a href="#" rel="新疆" name="province" class="default">新疆</a>
+                    <a href="#" rel="西藏" name="province" class="default">西藏</a>
+                    <a href="#" rel="海南" name="province" class="default">海南</a>
+                    <a href="#" rel="浙江" name="province" class="default">浙江</a>
+                    <a href="#" rel="青海" name="province" class="default">青海</a>
+                </dd>
+            </dl>
+            <dl class="cation-list">
+                <dt>院校类型</dt>
+                <dd>
+                    <a href="#" rel="" name="theme" class="all on">全部</a>
+                    <a href="#" rel="综合" name="theme" class="default">综合</a>
+                    <a href="#" rel="理工" name="theme" class="default">理工</a>
+                    <a href="#" rel="农林" name="theme" class="default">农林</a>
+                    <a href="#" rel="医药" name="theme" class="default">医药</a>
+                    <a href="#" rel="师范" name="theme" class="default">师范</a>
+                    <a href="#" rel="语言" name="theme" class="default">语言</a>
+                    <a href="#" rel="财经" name="theme" class="default">财经</a>
+                    <a href="#" rel="政法" name="theme" class="default">政法</a>
+                    <a href="#" rel="体育" name="theme" class="default">体育</a>
+                    <a href="#" rel="艺术" name="theme" class="default">艺术</a>
+                    <a href="#" rel="民族" name="theme" class="default">民族</a>
+                    <a href="#" rel="军事" name="theme" class="default">军事</a>
+                    <a href="#" rel="其他" name="theme" class="default">其他</a>
+                </dd>
+            </dl>
+            <dl class="cation-list">
+                <dt>办学类型</dt>
+                <dd>
+                    <a href="#" rel="" name="system" class="all on">全部</a>
+                    <a href="#" rel="普通本科" name="system" class="default">普通本科</a>
+                    <a href="#" rel="独立院校" name="system" class="default">独立院校</a>
+                    <a href="#" rel="专科（高职)" name="system" class="default">专科（高职)</a>
+                </dd>
+            </dl>
+            <dl class="cation-list">
+                <dt>高校层次</dt>
+                <dd>
+                    <a href="#" rel="" name="price" class="all on">全部</a>
+                    <a href="#" rel="985工程" name="price" class="default">985工程 </a>
+                    <a href="#" rel="211工程" name="price" class="default">211工程 </a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div align="center">
+        <table border="1" cellpadding="50" width="800">
+            <tr>
+                <td height="60" width="200" align="center" style="font-size: 20px">学校名称</td>
+                <td align="center" style="font-size: 20px">所在地</td>
+                <td align="center" style="font-size: 20px">办学类型</td>
+                <td align="center" style="font-size: 20px">热度排名</td>
+                <td align="center" style="font-size: 20px">类别排名</td>
+            </tr>
+            {% for school in schools %}
+                <tr>
+                    <th height="30" width="100"><a href="/school/{{ school.school_id }}/">{{ school.school_name }}</a></th>
+                    <th>{{ school.province_name }}</th>
+                    <th>{{ school.level_name }}</th>
+                    <th>{{ school.rank }}</th>
+                    <th>{{ school.type_name }}&emsp;{{ school.rank_type }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="bottom_page" align="center" style="font-size: 20px">
+        <a href="/school?page=1" >首页</a>
+        {% if schools.has_previous %}
+            <a href="/school?page={{ schools.previous_page_number }}">上一页</a>
+        {% else %}
+            <a href="/school?page=1">上一页</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ schools.number }} of {{ schools.paginator.num_pages }}
+        </span>
+
+        {% if schools.has_next %}
+            <a class='active' href="/school?page={{ schools.next_page_number }}">下一页</a>
+        {% else %}
+            <a class='active' href="/school?page={{ schools.paginator.num_pages }}">下一页</a>
+        {% endif %}
+        <a href="/school?page={{ schools.paginator.num_pages }}">尾页</a>
+    </div>
+<script type="text/javascript">
+    $(function(){
+        new SelectTag({
+            child : ".default", //所有默认
+            over : 'on', //当前选中
+            all : ".all" // 默认全部
+        });
+    })
+</script>
+
+
+{% endblock %}

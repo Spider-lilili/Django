@@ -47,13 +47,23 @@
         </div>
     </div>
     {% endif %}
-    <div class="search">
 
-        <div class="input">
-            <input type="" name="" placeholder="请输入查询的大学">
-            <img src="/static/1_06.png">
+    <div id="container">
+        <div class="search bar7">
+            <form action="/search/">
+                {% csrf_token %}
+                <input type="text" placeholder="请输入需要查询的大学" name="search">
+                <button type="submit"></button>
+            </form>
         </div>
     </div>
+
+{#    <div class="search">#}
+{#        <div class="input">#}
+{#            <input type="" name="" placeholder="请输入查询的大学">#}
+{#            <img src="/static/1_06.png">#}
+{#        </div>#}
+{#    </div>#}
 
     <div class="navbar">
         <a href="/school/">学校大全</a>

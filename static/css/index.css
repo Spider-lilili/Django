@@ -116,8 +116,6 @@ a {
 }
 
 
-/*头部*/
-
 
 /*search*/
 
@@ -128,12 +126,6 @@ a {
     margin: 21px auto 0;
     overflow: hidden;
 }
-.logo{
-    top:0;
-    left: 0;
-    position: absolute;
-}
-
 .search .items {
     top: 0;
     left: 445px;

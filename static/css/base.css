@@ -20,3 +20,62 @@
     background-color: #ddd;
     color: black;
 }
+
+/*搜索框样式*/
+#container {
+    width:500px;
+    /*margin-top: 10px;*/
+    /*margin-bottom: 5px;*/
+    margin-left: 250px;
+    height:50px;
+    /*margin:0 auto;*/
+}
+/*div.search {*/
+/*  padding:10px 0;*/
+/*}*/
+form {
+    position:relative;
+    width:300px;
+    margin:0 auto;
+}
+input,button {
+    border:none;
+    outline:none;
+}
+input {
+    width:100%;
+    height:42px;
+    padding-left:13px;
+}
+button {
+    height:42px;
+    width:42px;
+    cursor:pointer;
+    position:absolute;
+}
+/*搜索框7*/
+
+.bar7 form {
+    height:42px;
+}
+.bar7 input {
+    width:300px;
+    border-radius:42px;
+    border:2px solid #324B4E;
+    background: floralwhite;
+    transition:.3s linear;
+    float:right;
+}
+.bar7 input:focus {
+    width:350px;
+}
+.bar7 button {
+    background:none;
+    top:-2px;
+    right:20px;
+}
+.bar7 button:before {
+    content:"Search";
+    font-family:FontAwesome;
+    color:#324b4e;
+}
