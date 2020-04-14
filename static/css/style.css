@@ -1,6 +1,7 @@
 /* 公共样式表css */
 html,body {
     color: #333;
+    /*color: white;*/
     margin: 0;
     height: 100%;
 }
@@ -21,7 +22,8 @@ img {
 }
 
 body {
-	background-color: #E8E8E8;
+    background-color: white;
+	/*background-color: #E8E8E8;*/
 	color: #666;
 }
 

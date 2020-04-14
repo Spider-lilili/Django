@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponseRedirect
@@ -27,13 +27,43 @@ def get_page(info, page=1, num=10):
 class IndexView(View):
     def get(self, request, id=459):
         page = request.GET.get('page', 1)
-        school_info = SchoolRank.objects.all().order_by('id')
+        province = request.GET.get('province')
+        type = request.GET.get('type')
+        argschtype = request.GET.get('argschtype')
+        schoolflag = request.GET.get('schoolflag')
+        if province:
+            school_info = SchoolRank.objects.filter(province_name=province).order_by('rank')
+        else:
+            school_info = SchoolRank.objects.all().order_by('rank')
+
+        if type:
+            school_info = school_info.filter(type_name__contains=type)
+        else:
+            school_info = school_info.all()
+
+        if argschtype in ['普通本科', '独立院校', '专科']:
+            school_info = school_info.filter(level_name__contains=argschtype)
+        elif argschtype in ['公办', '民办']:
+            school_info = school_info.filter(nature_name=argschtype)
+        else:
+            school_info = school_info.all()
+
+        if schoolflag == '985':
+            school_info = school_info.filter(f985=1)
+        elif schoolflag == '211':
+            school_info = school_info.filter(f211=1)
+        elif schoolflag == '双一流':
+            school_info = school_info.filter(dual_class_name=schoolflag)
+        else:
+            school_info = school_info.all()
         schools = get_page(school_info, page, 10)
         if schools:
-            return render(request, 'index.html', {"schools": schools, "id": id, "index": True})
+            return render(request, 'index.html', {"schools": schools, "id": id, "index": True, "province":province,
+                                                  "type":type, "argschtype":argschtype, "schoolflag":schoolflag})
         else:
             schools = get_page(school_info, page, 10)
-            return render(request, 'index.html', {"schools": schools, "id": id, "index": True})
+            return render(request, 'index.html', {"schools": schools, "id": id, "index": True, "province":province,
+                                                  "type":type, "argschtype":argschtype, "schoolflag":schoolflag})
 
 class SchoolBase(View):
     def get(self, request, id=459):
@@ -93,10 +123,27 @@ class CommentView(View):
             return render(request, 'school_comment.html', {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
 
 
+
+
 class SearchView(View):
     def post(self, request):
         school_name = request.POST.get('search','')
+        print(school_name)
         if school_name:
-            base_info = SchoolRank.objects.filter(school_name=school_name).first()
-            school_info = SchoolBaseInfo.objects.filter(school_id=base_info.school_id).first()
-            return render(request, 'school_base_info.html', {"school": school_info, "base_info": base_info})
+            try:
+                base_info = SchoolRank.objects.filter(school_name=school_name).first()
+                school_info = SchoolBaseInfo.objects.filter(school_id=base_info.school_id).first()
+                return HttpResponseRedirect('/school/{}/'.format(base_info.school_id), {"school": school_info, "base_info": base_info})
+            except AttributeError:
+                pass
+            # return render(request, 'school_base_info.html', {"school": school_info, "base_info": base_info})
+
+class CheckSchoolname(View):
+    def get(self, request):
+        flag = False
+        school_name = request.GET.get('schoolname', "")
+        # 查询用户名
+        school_List = SchoolRank.objects.filter(school_name=school_name)
+        if school_List:
+            flag = True
+        return JsonResponse({'flag': flag})

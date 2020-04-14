@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae71c5d-f7f7-463d-8626-77fb2ac7b916" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/current.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery.min1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/school/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/school_base_info.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/school_base_info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +56,7 @@
       <recent name="$PROJECT_DIR$/media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/school/templates" />
       <recent name="$PROJECT_DIR$/user/templates" />
       <recent name="$PROJECT_DIR$/utils" />
     </key>
@@ -142,7 +138,7 @@
       <workItem from="1586660886385" duration="12789000" />
       <workItem from="1586693893710" duration="1531000" />
       <workItem from="1586746069939" duration="9514000" />
-      <workItem from="1586824699593" duration="5360000" />
+      <workItem from="1586824699593" duration="14339000" />
     </task>
     <servers />
   </component>
@@ -158,28 +154,28 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="550" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586175508575" />
-    <state width="1638" height="363" key="GridCell.Tab.0.bottom" timestamp="1586779404582">
-      <screen x="0" y="23" width="1680" height="954" />
+    <state width="1638" height="427" key="GridCell.Tab.0.bottom" timestamp="1586847924373">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586772499654" />
+    <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586847924373" />
     <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586779404582" />
     <state width="1638" height="427" key="GridCell.Tab.0.bottom/0.23.1680.956@0.23.1680.956" timestamp="1586609911299" />
-    <state width="1638" height="363" key="GridCell.Tab.0.center" timestamp="1586779404581">
-      <screen x="0" y="23" width="1680" height="954" />
+    <state width="1638" height="427" key="GridCell.Tab.0.center" timestamp="1586847924372">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586772499653" />
+    <state width="1638" height="427" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586847924372" />
     <state width="1638" height="363" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586779404581" />
     <state width="1638" height="427" key="GridCell.Tab.0.center/0.23.1680.956@0.23.1680.956" timestamp="1586609911298" />
-    <state width="1638" height="363" key="GridCell.Tab.0.left" timestamp="1586779404580">
-      <screen x="0" y="23" width="1680" height="954" />
+    <state width="1638" height="427" key="GridCell.Tab.0.left" timestamp="1586847924371">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586772499652" />
+    <state width="1638" height="427" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586847924371" />
     <state width="1638" height="363" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586779404580" />
     <state width="1638" height="427" key="GridCell.Tab.0.left/0.23.1680.956@0.23.1680.956" timestamp="1586609911298" />
-    <state width="1638" height="363" key="GridCell.Tab.0.right" timestamp="1586779404582">
-      <screen x="0" y="23" width="1680" height="954" />
+    <state width="1638" height="427" key="GridCell.Tab.0.right" timestamp="1586847924373">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="427" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586772499654" />
+    <state width="1638" height="427" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586847924373" />
     <state width="1638" height="363" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586779404582" />
     <state width="1638" height="427" key="GridCell.Tab.0.right/0.23.1680.956@0.23.1680.956" timestamp="1586609911299" />
     <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1586779404584">
@@ -214,10 +210,10 @@
       <screen x="-960" y="107" width="960" height="681" />
     </state>
     <state x="-960" y="107" width="960" height="681" key="dock-window-2/-960.107.960.681/0.23.1680.954@0.23.1680.954" timestamp="1586580233230" />
-    <state x="498" y="282" width="683" height="486" key="find.popup" timestamp="1586592447446">
+    <state x="498" y="282" width="683" height="486" key="find.popup" timestamp="1586856008629">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586592447446" />
+    <state x="498" y="282" width="683" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586856008629" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bishe$draw_job_company.coverage" NAME="draw_job_company Coverage Results" MODIFIED="1586483475081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

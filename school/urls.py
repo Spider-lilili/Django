@@ -22,5 +22,6 @@ urlpatterns = [
     re_path('^(\d+)/job_company/$', views.Job_company.as_view()),
     re_path('^(\d+)/comment/$', views.CommentView.as_view()),
     re_path('^search/$', views.SearchView.as_view()),
+    re_path('^checkschool/$', views.CheckSchoolname.as_view())
 ]
 

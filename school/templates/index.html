@@ -53,44 +53,47 @@
             <dl class="cation-list">
                 <dt>院校类型</dt>
                 <dd>
-                    <a href="#" rel="" name="theme" class="all on">全部</a>
-                    <a href="#" rel="综合" name="theme" class="default">综合</a>
-                    <a href="#" rel="理工" name="theme" class="default">理工</a>
-                    <a href="#" rel="农林" name="theme" class="default">农林</a>
-                    <a href="#" rel="医药" name="theme" class="default">医药</a>
-                    <a href="#" rel="师范" name="theme" class="default">师范</a>
-                    <a href="#" rel="语言" name="theme" class="default">语言</a>
-                    <a href="#" rel="财经" name="theme" class="default">财经</a>
-                    <a href="#" rel="政法" name="theme" class="default">政法</a>
-                    <a href="#" rel="体育" name="theme" class="default">体育</a>
-                    <a href="#" rel="艺术" name="theme" class="default">艺术</a>
-                    <a href="#" rel="民族" name="theme" class="default">民族</a>
-                    <a href="#" rel="军事" name="theme" class="default">军事</a>
-                    <a href="#" rel="其他" name="theme" class="default">其他</a>
+                    <a href="#" rel="" name="type" class="all on">全部</a>
+                    <a href="#" rel="综合" name="type" class="default">综合</a>
+                    <a href="#" rel="理工" name="type" class="default">理工</a>
+                    <a href="#" rel="农林" name="type" class="default">农林</a>
+                    <a href="#" rel="医药" name="type" class="default">医药</a>
+                    <a href="#" rel="师范" name="type" class="default">师范</a>
+                    <a href="#" rel="语言" name="type" class="default">语言</a>
+                    <a href="#" rel="财经" name="type" class="default">财经</a>
+                    <a href="#" rel="政法" name="type" class="default">政法</a>
+                    <a href="#" rel="体育" name="type" class="default">体育</a>
+                    <a href="#" rel="艺术" name="type" class="default">艺术</a>
+                    <a href="#" rel="民族" name="type" class="default">民族</a>
+                    <a href="#" rel="军事" name="type" class="default">军事</a>
+                    <a href="#" rel="其他" name="type" class="default">其他</a>
                 </dd>
             </dl>
             <dl class="cation-list">
                 <dt>办学类型</dt>
                 <dd>
-                    <a href="#" rel="" name="system" class="all on">全部</a>
-                    <a href="#" rel="普通本科" name="system" class="default">普通本科</a>
-                    <a href="#" rel="独立院校" name="system" class="default">独立院校</a>
-                    <a href="#" rel="专科（高职)" name="system" class="default">专科（高职)</a>
+                    <a href="#" rel="" name="argschtype" class="all on">全部</a>
+                    <a href="#" rel="普通本科" name="argschtype" class="default">普通本科</a>
+                    <a href="#" rel="独立院校" name="argschtype" class="default">独立院校</a>
+                    <a href="#" rel="专科" name="argschtype" class="default">专科(高职)</a>
+                    <a href="#" rel="公办" name="argschtype" class="default">公办</a>
+                    <a href="#" rel="民办" name="argschtype" class="default">民办</a>
                 </dd>
             </dl>
             <dl class="cation-list">
                 <dt>高校层次</dt>
                 <dd>
-                    <a href="#" rel="" name="price" class="all on">全部</a>
-                    <a href="#" rel="985工程" name="price" class="default">985工程 </a>
-                    <a href="#" rel="211工程" name="price" class="default">211工程 </a>
+                    <a href="#" rel="" name="schoolflag" class="all on">全部</a>
+                    <a href="#" rel="985" name="schoolflag" class="default">985工程</a>
+                    <a href="#" rel="211" name="schoolflag" class="default">211工程</a>
+                    <a href="#" rel="双一流" name="schoolflag" class="default">双一流大学</a>
                 </dd>
             </dl>
         </div>
     </div>
 
     <div align="center">
-        <table border="1" cellpadding="50" width="800">
+        <table border="1" cellpadding="50" width="800" style="background: white">
             <tr>
                 <td height="60" width="200" align="center" style="font-size: 20px">学校名称</td>
                 <td align="center" style="font-size: 20px">所在地</td>
@@ -100,7 +103,7 @@
             </tr>
             {% for school in schools %}
                 <tr>
-                    <th height="30" width="100"><a href="/school/{{ school.school_id }}/">{{ school.school_name }}</a></th>
+                    <th height="40" width="100"><a href="/school/{{ school.school_id }}/">{{ school.school_name }}</a></th>
                     <th>{{ school.province_name }}</th>
                     <th>{{ school.level_name }}</th>
                     <th>{{ school.rank }}</th>
@@ -113,11 +116,11 @@
     <br>
     <br>
     <div class="bottom_page" align="center" style="font-size: 20px">
-        <a href="/school?page=1" >首页</a>
+        <a href="/school?page=1{% if province %}&province={{ province }}{% endif %}{% if type %}&type={{ type }}{% endif %}{% if argschtype %}&argschtype={{ argschtype }}{% endif %}{% if schoolflag %}&schoolflag={{ schoolflag }}{% endif %}" >首页</a>
         {% if schools.has_previous %}
-            <a href="/school?page={{ schools.previous_page_number }}">上一页</a>
+            <a href="/school?page={{ schools.previous_page_number }}{% if province %}&province={{ province }}{% endif %}{% if type %}&type={{ type }}{% endif %}{% if argschtype %}&argschtype={{ argschtype }}{% endif %}{% if schoolflag %}&schoolflag={{ schoolflag }}{% endif %}">上一页</a>
         {% else %}
-            <a href="/school?page=1">上一页</a>
+            <a href="/school?page=1{% if province %}&province={{ province }}{% endif %}{% if type %}&type={{ type }}{% endif %}{% if argschtype %}&argschtype={{ argschtype }}{% endif %}{% if schoolflag %}&schoolflag={{ schoolflag }}{% endif %}">上一页</a>
         {% endif %}
 
         <span class="current">
@@ -125,11 +128,11 @@
         </span>
 
         {% if schools.has_next %}
-            <a class='active' href="/school?page={{ schools.next_page_number }}">下一页</a>
+            <a class='active' href="/school?page={{ schools.next_page_number }}{% if province %}&province={{ province }}{% endif %}{% if type %}&type={{ type }}{% endif %}{% if argschtype %}&argschtype={{ argschtype }}{% endif %}{% if schoolflag %}&schoolflag={{ schoolflag }}{% endif %}">下一页</a>
         {% else %}
-            <a class='active' href="/school?page={{ schools.paginator.num_pages }}">下一页</a>
+            <a class='active' href="/school?page={{ schools.paginator.num_pages }}{% if province %}&province={{ province }}{% endif %}{% if type %}&type={{ type }}{% endif %}{% if argschtype %}&argschtype={{ argschtype }}{% endif %}{% if schoolflag %}&schoolflag={{ schoolflag }}{% endif %}">下一页</a>
         {% endif %}
-        <a href="/school?page={{ schools.paginator.num_pages }}">尾页</a>
+        <a href="/school?page={{ schools.paginator.num_pages }}{% if province %}&province={{ province }}{% endif %}{% if type %}&type={{ type }}{% endif %}{% if argschtype %}&argschtype={{ argschtype }}{% endif %}{% if schoolflag %}&schoolflag={{ schoolflag }}{% endif %}">尾页</a>
     </div>
 <script type="text/javascript">
     $(function(){
