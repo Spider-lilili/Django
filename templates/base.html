@@ -27,36 +27,41 @@
 
     {% csrf_token %}
 {#    {% if user != None %}#}
-    {% if user.is_authenticated %}
-        <div class="dropdown">
-            <span>欢迎您，{{ user.username }}</span>
-            <div class="dropdown-content">
-                <span>个人中心</span>
-                <a class="logout">退出登录</a>
+    <div style="margin-left: 1400px; font-size: 15px">
+        {% if user.is_authenticated %}
+            <div class="dropdown">
+                <span>欢迎您，{{ user.username }}</span>
+                <div class="dropdown-content">
+                    <span>个人中心</span>
+                    <a class="logout">退出登录</a>
+                </div>
+            </div>
+        {% else %}
+            <div class="head">
+            <div class="head-in">
+                <div class="register">
+                    <a href="/login/">免费注册</a>
+                </div>
+                <div class="sign">
+                    <a href="/login/">登录</a>
+                </div>
             </div>
         </div>
-    {% else %}
-        <div class="head">
-        <div class="head-in">
-            <div class="register">
-                <a href="/login/">免费注册</a>
-            </div>
-            <div class="sign">
-                <a href="/login/">登录</a>
-            </div>
-        </div>
+        {% endif %}
     </div>
-    {% endif %}
 
-    <div id="container">
-        <div class="search bar7">
-            <form action="/school/search/" method="post" onsubmit="return search1();">
-                {% csrf_token %}
-                <input type="text" placeholder="请输入需要查询的大学" name="search" id="search" onblur="checkschool(this.value)" required="required">
-                <button type="submit"></button>
-            </form>
+
+
+        <div id="container">
+            <div class="search bar7">
+                <form action="/school/search/" method="post" onsubmit="return search1();">
+                    {% csrf_token %}
+                    <input type="text" placeholder="请输入需要查询的大学" name="search" id="search" onblur="checkschool(this.value)" required="required">
+                    <button type="submit"></button>
+                </form>
+            </div>
         </div>
-    </div>
+
 
 {#    <div class="search">#}
 {#        <div class="input">#}
@@ -141,56 +146,8 @@
 
 
     {% block footerjs %}
-
+        <script src="/static/base.js"></script>
     {% endblock %}
-
-<script>
-    $('.logout').click(function () {
-        $.ajax({
-            type:'post',
-            url:'/logout/',
-            data:'csrfmiddlewaretoken='+$('input[name="csrfmiddlewaretoken"]').val(),
-            success: function (result) {
-                if(result.delflag){
-                    window.location.href='/login/'
-                }
-
-            }
-        })
-    });
-
-    function search1(){
-        //获取输入框内的值
-        var search = $('#search').val();
-        //简单的校验
-        if (search.length < 4){
-            alert('请输入不少于2个字符');
-            return false;
-        };
-        if (!checkschool(search)){
-            alert('数据库中暂无该学校相关信息')
-            return false
-        }
-    }
-
-    function checkschool(schoolname) {
-    var flag = false;
-    $.ajax({
-        url:'/school/checkschool/',
-        type:"GET",
-        async:false,
-        data:{'schoolname':schoolname},
-        success: function (result) {
-            var cflag = result.flag;
-            if(cflag){
-                flag = true;
-            }
-        }
-    });
-    return flag;
-    }
-</script>
-
 
 </body>
 

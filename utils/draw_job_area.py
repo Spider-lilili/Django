@@ -16,8 +16,16 @@ class JobArea():
     def draw(self):
         pass
 
+    def save_img(self):
+        pass
+
     def main(self):
         self.draw()
+
+
+if __name__ == '__main__':
+    job_area = JobArea()
+    job_area.main()
 
 
 
