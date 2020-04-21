@@ -32,7 +32,7 @@ select {
 body {
     font-family: "Microsoft YaHei";
     font-size: 14px;
-    color: #333;
+    color: white;
 }
 
 h1,
@@ -60,16 +60,12 @@ a {
     color: #333;
 }
 
-
-/*清除默认样式*/
-
-
 /*头部*/
 
 .head {
     width: auto;
     height: 30px;
-    background-color: #f6f6f6;
+    background-color: white;
 }
 
 .head-in {
@@ -78,6 +74,7 @@ a {
     padding-right: 33px;
     margin: 0 auto;
     font-size: 12px;
+
 }
 
 .options {
@@ -175,139 +172,3 @@ a {
 }
 
 
-/*导航*/
-.nav{
-    height: 38px;
-    border-bottom: 2px solid #ff464e;
-}
-.nav-content{
-    width: 1200px;
-    height: 38px;
-    margin: 0 auto;
-}
-.nav_items{
-    float: left;
-    width: 624px;
-    height: 38px;
-}
-.nav_items>li.item{
-    float: left;
-    width: 104px;
-    height: 38px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    text-align: center;
-    line-height: 38px;
-}
-.nav_items>li.item.active{
-    background-color: #ff464e;
-}
-.qiandao{
-    float: right;
-    width: 105px;
-    height: 19px;
-    padding-top: 10px;
-}
-
-
-/*分类classes*/
-.classes{
-    width: 1200px;
-    height: 50px;
-    margin: 0 auto;
-}
-.todayNew{
-    float: left;
-    width: 71px;
-    height: 50px;
-    line-height: 50px;
-}
-.classes-items{
-    float: left;
-    width: 798px;
-    height: 50px;
-    margin-left: 15px;
-}
-.classes-items>li.items{
-    float: left;
-    width: 57px;
-    height: 50px;
-    padding-top: 15px;
-}
-.classes-items>li.items.active a{
-    color: #ff464e;
-}
-.willOnline{
-    float: left;
-    width: 71px;
-    height: 50px;
-    line-height: 50px;
-    color: #336600;
-}
-
-
-/*商品卡片*/
-.goods-model, .detail-body{
-    background-color: #f6f6f6;
-}
-.goods-model{
-    min-height: 1000px;
-}
-.goods-content{
-    width: 1220px;
-    height: auto;
-    margin: 0 auto;
-    overflow: hidden;
-}
-.good{
-    position: relative;
-    float: left;
-    margin-right: 20px;
-    margin-top: 20px;
-    width: 285px;
-    height: 371px;
-    background-color: #ffffff;
-    overflow: hidden;
-}
-.good>a>p.name{
-    margin-top: 14px;   
-    margin-left: 5px;
-}
-.good .price{
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    width: 110px;
-    height: 30px;
-    padding-left: 8px;
-}
-.good .price i,.good .price p,.good .price s{
-    display: block;
-    float: left;
-}
-.good .price i{
-    margin-top: 17px;
-}
-.good .price p{
-    font-size: 30px;
-    color: #ff464e;
-}
-.good .price s{
-    margin-top: 17px;
-    color: #bbc6dd;
-}
-.good .sale{
-    position: absolute;
-    bottom: 15px;
-    right:11px;
-    color:#ff464e; 
-}
-
-
-.page{
-    width:100px;
-    height:100px;
-    margin:0 auto;
-    background-color:#ff464e;
-    text-align:center;
-}

@@ -132,3 +132,11 @@ class ActiveView(View):
             return HttpResponseRedirect('/school/')
         except SignatureExpired:
             return HttpResponse('该激活链接已过期！！！')
+
+
+class ChangePassword(View):
+    def get(self,request):
+        pass
+
+    def post(self,request):
+        pass

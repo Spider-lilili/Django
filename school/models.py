@@ -26,10 +26,24 @@ class SchoolBaseInfo(models.Model):
     num_subject = models.CharField(max_length=255, blank=True, null=True)
     num_lab = models.CharField(max_length=255, blank=True, null=True)
     num_library = models.CharField(max_length=255, blank=True, null=True)
+    english_name = models.CharField(max_length=255, blank=True, null=True)
+    attr = models.CharField(max_length=2000, blank=True, null=True)
+    current_leader = models.CharField(max_length=255, blank=True, null=True)
+    undergraduate = models.CharField(max_length=255, blank=True, null=True)
+    master_degree = models.CharField(max_length=255, blank=True, null=True)
+    phd = models.CharField(db_column='phD', max_length=255, blank=True, null=True)  # Field name made lowercase.
+    postdoctor = models.CharField(max_length=255, blank=True, null=True)
+    colleges = models.CharField(max_length=255, blank=True, null=True)
+    motto = models.CharField(max_length=255, blank=True, null=True)
+    school_song = models.CharField(max_length=255, blank=True, null=True)
+    school_day = models.CharField(max_length=255, blank=True, null=True)
+    well_known = models.CharField(max_length=255, blank=True, null=True)
+    academician = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'school_base_info'
+        unique_together = (('id', 'school_name'),)
 
 
 class SchoolComment(models.Model):
@@ -53,7 +67,6 @@ class SchoolContractArea(models.Model):
     province = models.CharField(max_length=255, blank=True, null=True)
     rate = models.CharField(max_length=255, blank=True, null=True)
     num = models.IntegerField(blank=True, null=True)
-    img = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False

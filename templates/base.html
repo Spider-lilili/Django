@@ -9,13 +9,9 @@
     <link rel="stylesheet" href="/static/school.css">
     <link rel="stylesheet" href="/static/allschool.css">
     <link rel="stylesheet" href="/static/index.css">
-{#    <link rel="stylesheet" href="/static/detail.css">#}
     <link rel="stylesheet" href="/static/reset.css">
-    <link rel="stylesheet" href="/static/mygxin.css">
     <link rel="stylesheet" href="/static/base.css">
     <script src="/static/jquery.min.js"></script>
-    <script src="/static/carts.js"></script>
-
     {% block headerjs %}
 
     {% endblock %}
@@ -27,28 +23,31 @@
 
     {% csrf_token %}
 {#    {% if user != None %}#}
-    <div style="margin-left: 1400px; font-size: 15px">
         {% if user.is_authenticated %}
-            <div class="dropdown">
-                <span>欢迎您，{{ user.username }}</span>
-                <div class="dropdown-content">
-                    <span>个人中心</span>
-                    <a class="logout">退出登录</a>
+            <div style="margin-left: 1400px; font-size: 15px; margin-top: 5px;">
+                <div class="dropdown">
+                    <span>欢迎您，{{ user.username }}</span>
+                    <div class="dropdown-content">
+                        <span><a href="/center/">个人中心</a></span>
+                        <span><a href="/changepassword/">修改密码</a></span>
+                        <span><a class="logout">退出登录</a></span>
+
+                    </div>
                 </div>
             </div>
         {% else %}
             <div class="head">
-            <div class="head-in">
-                <div class="register">
-                    <a href="/login/">免费注册</a>
-                </div>
-                <div class="sign">
-                    <a href="/login/">登录</a>
+                <div class="head-in">
+                    <div class="register">
+                        <a href="/login/">免费注册</a>
+                    </div>
+                    <div class="sign">
+                        <a href="/login/">登录</a>
+                    </div>
                 </div>
             </div>
-        </div>
         {% endif %}
-    </div>
+
 
 
 

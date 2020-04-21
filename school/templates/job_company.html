@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+    签约单位
+{% endblock %}
+
+{% block headerjs %}
+    <link rel="stylesheet" href="/static/professional.css">
+{% endblock %}
+
+{% block main %}
+
+
+    <div class="professional_left">
+        <div class="professional_wrap">
+            <div class="professional_item">
+                <div class="left_info_item">
+                    <div class="info_title_box">
+                        <div class="info_title_left">
+                            <p class="title_border"></p>
+                            <span>签约单位分布图</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div align="center">
+                    <img src="{{ job_company.img }}" width="800" height="600">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

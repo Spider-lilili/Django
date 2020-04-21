@@ -1,27 +1,15 @@
+import os
+
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponseRedirect
-
+from utils.draw_job_company import JobCompany
+from utils.draw_job_area import JobArea
 # Create your views here.
 from .models import *
-from django.core.paginator import Paginator, PageNotAnInteger, InvalidPage, EmptyPage
+from utils.other_tools import get_page, get_base_info
 
-
-def get_page(info, page=1, num=10):
-    paginator = Paginator(info, num)
-    try:
-        schools = paginator.page(page)
-    except PageNotAnInteger:
-        # 如果请求的页数不是整数, 返回第一页。
-        schools = paginator.page(1)
-    except InvalidPage:
-        # 如果请求的页数不存在, 获取第一页
-        schools = ''
-    except EmptyPage:
-        # 如果请求的页数不在合法的页数范围内，返回结果的最后一页。
-        schools = paginator.page(paginator.num_pages)
-    return schools
 
 
 class IndexView(View):
@@ -58,85 +46,105 @@ class IndexView(View):
             school_info = school_info.all()
         schools = get_page(school_info, page, 10)
         if schools:
-            return render(request, 'index.html', {"schools": schools, "id": id, "index": True, "province":province,
-                                                  "type":type, "argschtype":argschtype, "schoolflag":schoolflag})
+            return render(request, 'index.html', {"schools": schools, "id": id, "index": True, "province": province,
+                                                  "type": type, "argschtype": argschtype, "schoolflag": schoolflag})
         else:
             schools = get_page(school_info, page, 10)
-            return render(request, 'index.html', {"schools": schools, "id": id, "index": True, "province":province,
-                                                  "type":type, "argschtype":argschtype, "schoolflag":schoolflag})
+            return render(request, 'index.html', {"schools": schools, "id": id, "index": True, "province": province,
+                                                  "type": type, "argschtype": argschtype, "schoolflag": schoolflag})
+
 
 class SchoolBase(View):
     def get(self, request, id=459):
-        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
-        base_info = SchoolRank.objects.filter(school_id=id).first()
-        return render(request, 'school_base_info.html', {"school": school_info, "id": id, "base_info":base_info})
+        school_info, base_info = get_base_info(id)
+        return render(request, 'school_base_info.html', {"school": school_info, "id": id, "base_info": base_info})
 
 
 class ProfessionalView(View):
     def get(self, request, id=459):
         page = request.GET.get("page", 1)
         professional_list = SchoolSpecial.objects.filter(school_id=id).order_by('id')
-        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
-        base_info = SchoolRank.objects.filter(school_id=id).first()
+        school_info, base_info = get_base_info(id)
         schools = get_page(professional_list, page, num=15)
         if schools:
-            return render(request, 'professional.html', {"id": id, "professional_list": schools, "school": school_info, "base_info": base_info})
+            return render(request, 'professional.html',
+                          {"id": id, "professional_list": schools, "school": school_info, "base_info": base_info})
         else:
             schools = get_page(professional_list, 1, num=15)
-            return render(request, 'professional.html', {"id": id, "professional_list": schools, "school": school_info, "base_info": base_info})
+            return render(request, 'professional.html',
+                          {"id": id, "professional_list": schools, "school": school_info, "base_info": base_info})
 
 
 class ProvincelineView(View):
     def get(self, request, id=459):
-        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
-        base_info = SchoolRank.objects.filter(school_id=id).first()
+        school_info, base_info = get_base_info(id)
         provinceline_list = SchoolProvinceline.objects.filter(school_id=id).order_by('id')
         other_provinceline = SchoolLowestScore.objects.filter(school_id=id).order_by('id')
-        return render(request, 'provinceline.html', {"id": id, "provinceline_list": provinceline_list, "other_provinceline":other_provinceline, "school": school_info, "base_info": base_info})
+        return render(request, 'provinceline.html',
+                      {"id": id, "provinceline_list": provinceline_list, "other_provinceline": other_provinceline,
+                       "school": school_info, "base_info": base_info})
 
 
 class Job_area(View):
     def get(self, request, id=459):
-        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
-        base_info = SchoolRank.objects.filter(school_id=id).first()
-        return render(request, 'index.html', {"id": id, "school": school_info, "base_info": base_info})
+        school_info, base_info = get_base_info(id)
+        job_area = SchoolContractArea.objects.filter(school_id=id)
+        img_path = os.path.join(os.getcwd(),'media/job_area/{}.png'.format(id))
+        if not os.path.exists(img_path):
+            job = JobArea(job_area)
+            sql_path = job.main()
+        else:
+            sql_path = img_path
+        job_area_path = sql_path
+        return render(request, 'job_area.html',
+                      {"id": id, "school": school_info, "base_info": base_info, "job_area_path": job_area_path})
 
 
 class Job_company(View):
     def get(self, request, id=459):
-        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
-        base_info = SchoolRank.objects.filter(school_id=id).first()
-        return render(request, 'index.html', {"id": id, "school": school_info, "base_info": base_info})
+        school_info, base_info = get_base_info(id)
+        job_company = SchoolUnitNature.objects.filter(school_id=id).first()
+        # 判断图片是否已经生成
+        if not job_company.img:
+            # 执行画图函数，让数据可视化(utils)
+            job = JobCompany(job_company.school_id, job_company.unit_nature)
+            sql_path = job.main()
+            job_company.img = sql_path
+            job_company.save()
+
+        return render(request, 'job_company.html',
+                      {"id": id, "school": school_info, "base_info": base_info, "job_company": job_company})
 
 
 class CommentView(View):
     def get(self, request, id=459):
         page = request.GET.get('page', 1)
         comment_list = SchoolComment.objects.filter(school_id=id).order_by('id')
-        school_info = SchoolBaseInfo.objects.filter(school_id=id).first()
-        base_info = SchoolRank.objects.filter(school_id=id).first()
+        school_info, base_info = get_base_info(id)
         schools = get_page(comment_list, page, num=10)
         if schools:
-            return render(request, 'school_comment.html', {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
+            return render(request, 'school_comment.html',
+                          {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
         else:
             schools = get_page(comment_list, 1, num=10)
-            return render(request, 'school_comment.html', {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
-
-
+            return render(request, 'school_comment.html',
+                          {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
 
 
 class SearchView(View):
     def post(self, request):
-        school_name = request.POST.get('search','')
+        school_name = request.POST.get('search', '')
         print(school_name)
         if school_name:
             try:
                 base_info = SchoolRank.objects.filter(school_name=school_name).first()
                 school_info = SchoolBaseInfo.objects.filter(school_id=base_info.school_id).first()
-                return HttpResponseRedirect('/school/{}/'.format(base_info.school_id), {"school": school_info, "base_info": base_info})
+                return HttpResponseRedirect('/school/{}/'.format(base_info.school_id),
+                                            {"school": school_info, "base_info": base_info})
             except AttributeError:
                 pass
             # return render(request, 'school_base_info.html', {"school": school_info, "base_info": base_info})
+
 
 class CheckSchoolname(View):
     def get(self, request):
