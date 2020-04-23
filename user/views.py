@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail
 from utils.mixin import LoginRequiredMixin
-# from celery_tasks.tasks import send_active_email
+from celery_tasks.tasks import send_active_email
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired
 from django.conf import settings
@@ -60,16 +60,16 @@ class LoginView(View):
             info = {'confirm': user.id}
             token = serializer.dumps(info).decode('utf8')
 
-            subject = '高校信息查询网'
-            message = ''
-            html_message = '<h1>{},欢迎注册高校信息查询网，<br>请点击您的激活连接<a href="http://127.0.0.1:8000/active/{}"></a>http://127.0.0.1:8000/active/{}</h1>'.format(
-                user.username, token, token)
-            sender = settings.EMAIL_FROM
-            receiver = [user.email]
-            # 同步发送邮件（会导致阻塞）
-            send_mail(subject, message, sender, receiver, html_message=html_message)
+            # subject = '高校信息查询网'
+            # message = ''
+            # html_message = '<h1>{},欢迎注册高校信息查询网，<br>请点击您的激活连接<a href="http://127.0.0.1:8000/active/{}"></a>http://127.0.0.1:8000/active/{}</h1>'.format(
+            #     user.username, token, token)
+            # sender = settings.EMAIL_FROM
+            # receiver = [user.email]
+            # # 同步发送邮件（会导致阻塞）
+            # send_mail(subject, message, sender, receiver, html_message=html_message)
             # 使用celery异步发送邮件（目前暂不支持python3.7）
-            # send_active_email.delay(user.username, user.email, token)
+            send_active_email.delay(user.username, user.email, token)
 
             if user:
                 # 将用户信息存放在session对象中
