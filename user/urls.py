@@ -25,7 +25,10 @@ urlpatterns = [
     re_path('^loadcode/$', views.LoadCodeView.as_view()),
     re_path('^checkcode/$', views.CheckCodeView.as_view()),
     re_path('^active/(?P<token>.*)$', views.ActiveView.as_view()),
-    re_path('^changepassword/(?P<token>.*)$', views.ChangePassword.as_view())
+    re_path('^changepassword/(?P<token>.*)$', views.ChangePassword.as_view()),
+    re_path('^password/', views.ReceiveEmail.as_view()),
+    re_path('^changepassword/(?P<token>.*)$', views.ChangePassword.as_view()),
+    re_path('^verifypassword/', views.VerifyPassword.as_view())
 ]
 
 

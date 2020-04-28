@@ -21,11 +21,10 @@ app = Celery('celery_tasks.tasks', broker='redis://127.0.0.1:6379/1')
 
 # 使用celery发送邮件（异步）
 @app.task
-def send_active_email(username, to_email, token):
+def send_active_email(username, to_email, token, html_message):
     subject = '高校信息查询网'
     message = ''
-    html_message = '<h1>{},欢迎注册高校信息查询网，<br>请点击您的激活连接<a href="http://127.0.0.1:8000/active/{}"></a>http://127.0.0.1:8000/active/{}</h1>'.format(
-        username, token, token)
+
     sender = settings.EMAIL_FROM
     receiver = [to_email]
 

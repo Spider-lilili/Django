@@ -1,7 +1,8 @@
+from django.contrib.auth.hashers import make_password
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.core.mail import send_mail
 from utils.mixin import LoginRequiredMixin
 from celery_tasks.tasks import send_active_email
@@ -33,7 +34,7 @@ class LoginView(View):
     def post(self, request):
         # 获取登陆表单
         if "login" in request.POST:
-            user_name = request.POST.get("user_name", "")
+            user_name = request.POST.get("username", "")
             user_password = request.POST.get("pwd", "")
             user = authenticate(username=user_name, password=user_password)
             if user:
@@ -69,12 +70,14 @@ class LoginView(View):
             # # 同步发送邮件（会导致阻塞）
             # send_mail(subject, message, sender, receiver, html_message=html_message)
             # 使用celery异步发送邮件（目前暂不支持python3.7）
-            send_active_email.delay(user.username, user.email, token)
+            html_message = '<h1>Dear, {} !,欢迎注册高校信息查询网，<br>请点击您的激活连接<a href="http://127.0.0.1:8000/active/{}"></a>http://127.0.0.1:8000/active/{}</h1>'.format(
+                user.username, token, token)
+            send_active_email.delay(user.username, user.email, token, html_message)
 
             if user:
                 # 将用户信息存放在session对象中
-                request.session['user'] = user
-                return HttpResponseRedirect('/school/')
+                # request.session['user'] = user
+                return HttpResponseRedirect('/login/')
 
 
 # 个人中心处理函数
@@ -133,10 +136,50 @@ class ActiveView(View):
         except SignatureExpired:
             return HttpResponse('该激活链接已过期！！！')
 
+class ReceiveEmail(View):
+    def get(self, request):
+        return render(request, 'ReceiveEmail.html')
+
+    def post(self, request):
+        username = request.POST.get('user_name', '')
+        email = request.POST.get('email', '')
+        serializer = Serializer(settings.SECRET_KEY, 7200)
+        info = {'confirm': username}
+        token = serializer.dumps(info).decode('utf8')
+        html_message = '<h1>Dear, {} !,我们听说您丢失了高校信息查询网的密码。对于那个很抱歉！<br>但是不用担心！您可以使用下面的链接重置您的密码：<a href="http://127.0.0.1:8000/changepassword/{}"></a>http://127.0.0.1:8000/changepassword/{}</h1>'.format(
+            username, token, token)
+        send_active_email.delay(username, email, token, html_message)
+        return HttpResponseRedirect('/login/')
+
 
 class ChangePassword(View):
-    def get(self,request):
-        pass
+    def get(self, request, token):
+        return render(request, 'changepassword.html')
 
-    def post(self,request):
-        pass
+    def post(self, request, token):
+        # 解密，获取用户信息
+        serializer = Serializer(settings.SECRET_KEY, 7200)
+        password = request.POST.get('password', '')
+        try:
+            info = serializer.loads(token)
+            username = info.get("confirm")
+            user = UserProfile.objects.get(username=username)
+            user.password = make_password(password)
+            user.save()
+            # update_session_auth_hash(request, username)
+            return HttpResponseRedirect('/login/')
+        except SignatureExpired:
+            return HttpResponse('该激活链接已过期！！！')
+
+
+class VerifyPassword(View):
+    def get(self, request):
+        flag = False
+        username = request.GET.get('username', '')
+        password = request.GET.get('password', '')
+        print(username,password)
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_active:
+                flag = True
+        return JsonResponse({'checkFlag': flag})
