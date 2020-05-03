@@ -40,6 +40,9 @@ class SchoolBaseInfo(models.Model):
     well_known = models.CharField(max_length=255, blank=True, null=True)
     academician = models.CharField(max_length=255, blank=True, null=True)
 
+    def __str__(self):
+        return self.school_name
+
     class Meta:
         managed = False
         db_table = 'school_base_info'

@@ -3,16 +3,7 @@
   position: relative;
   display: inline-block;
 }
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 100px;
-    min-height: 30px;
-  box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
-  padding: 10% 5%;
-    font-size: 20px;
-}
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -21,6 +12,29 @@
     background-color: #ddd;
     color: black;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 110px;
+    min-height: 60px;
+  /*box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);*/
+  padding: 10% 10%;
+    font-size: 20px;
+
+    border-top: 2px solid #7dc642;
+    left: 0;
+    top: 110%;
+    box-shadow: 0 15px 30px 0 rgba(0, 3, 143, 0.1);
+    text-align: left;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
 
 /*搜索框样式*/
 #container {

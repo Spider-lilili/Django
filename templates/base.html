@@ -22,9 +22,11 @@
 <body>
 
     {% csrf_token %}
+    <div style="background: white;">
 {#    {% if user != None %}#}
         {% if user.is_authenticated %}
             <div style="margin-left: 1400px; font-size: 15px; margin-top: 5px;">
+
                 <div class="dropdown">
                     <span>欢迎您，{{ user.username }}</span>
                     <div class="dropdown-content">
@@ -34,6 +36,7 @@
 
                     </div>
                 </div>
+
             </div>
         {% else %}
             <div class="head">
@@ -49,8 +52,6 @@
         {% endif %}
 
 
-
-
         <div id="container">
             <div class="search bar7">
                 <form action="/school/search/" method="post" onsubmit="return search1();">
@@ -60,6 +61,7 @@
                 </form>
             </div>
         </div>
+    </div>
 
 
 {#    <div class="search">#}

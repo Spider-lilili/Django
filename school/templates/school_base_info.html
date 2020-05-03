@@ -72,7 +72,7 @@
                     </li>
                     <li class="item_bottom_li">
 {#                        <img width="16" height="16" src="/media/zhandimianji.png">#}
-                            <span class="ellipsis">占地面积：{{ school.area }}</span>
+                            <span class="ellipsis">占地面积：{{ school.area }}亩</span>
                     </li>
                     <li class="item_bottom_li">
 {#                        <img width="16" height="16" src="/media/lishuyu.png">#}
@@ -99,6 +99,61 @@
                             <span class="ellipsis">简&emsp;称&emsp;：{{ school.short }}</span>
                         </li>
                     {% endif %}
+
+                    {% if school.english_name %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">英文名&emsp;：{{ school.english_name }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.current_leader %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">现任领导：{{ school.current_leader }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.undergraduate %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">本科专业：{{ school.undergraduate }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.motto %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">校&emsp;训&emsp;：{{ school.motto }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.school_song %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">校&emsp;歌&emsp;：{{ school.school_song }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.school_day %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">校庆日&emsp;：{{ school.school_day }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.attr %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">属&emsp;性&emsp;：{{ school.attr }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.well_known %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">知名校友：{{ school.well_known }}</span>
+                        </li>
+                    {% endif %}
+
+                    {% if school.academician %}
+                        <li class="item_bottom_li">
+                            <span class="ellipsis">院&emsp;士&emsp;：{{ school.academician }}</span>
+                        </li>
+                    {% endif %}
+
                 </ul>
             </div>
             <div class="base_info_item_bottom">

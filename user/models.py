@@ -18,7 +18,7 @@ class UserProfile(AbstractUser):
     sex = models.CharField(max_length=50, verbose_name='性别')
     birthday = models.DateField(null=True, blank=True)
     phone = models.CharField(max_length=11, verbose_name='手机')
-    last_login = models.DateTimeField(blank=True, null=True)
+    last_login = models.DateTimeField(blank=True, null=True, )
     is_superuser = models.IntegerField(default=0)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=150)

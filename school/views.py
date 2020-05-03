@@ -6,8 +6,8 @@ from django.views import View
 from django.http import HttpResponseRedirect
 from utils.draw_job_company import JobCompany
 from utils.draw_job_area import JobArea
-# Create your views here.
 from .models import *
+from utils.mixin import LoginRequiredMixin
 from utils.other_tools import get_page, get_base_info
 
 
@@ -75,7 +75,7 @@ class ProfessionalView(View):
                           {"id": id, "professional_list": schools, "school": school_info, "base_info": base_info})
 
 
-class ProvincelineView(View):
+class ProvincelineView(LoginRequiredMixin, View):
     def get(self, request, id=459):
         school_info, base_info = get_base_info(id)
         provinceline_list = SchoolProvinceline.objects.filter(school_id=id).order_by('id')
@@ -85,7 +85,7 @@ class ProvincelineView(View):
                        "school": school_info, "base_info": base_info})
 
 
-class Job_area(View):
+class Job_area(LoginRequiredMixin, View):
     def get(self, request, id=459):
         school_info, base_info = get_base_info(id)
         job_area = SchoolContractArea.objects.filter(school_id=id)
@@ -100,7 +100,7 @@ class Job_area(View):
                       {"id": id, "school": school_info, "base_info": base_info, "job_area_path": job_area_path})
 
 
-class Job_company(View):
+class Job_company(LoginRequiredMixin, View):
     def get(self, request, id=459):
         school_info, base_info = get_base_info(id)
         job_company = SchoolUnitNature.objects.filter(school_id=id).first()
@@ -116,7 +116,7 @@ class Job_company(View):
                       {"id": id, "school": school_info, "base_info": base_info, "job_company": job_company})
 
 
-class CommentView(View):
+class CommentView(LoginRequiredMixin, View):
     def get(self, request, id=459):
         page = request.GET.get('page', 1)
         comment_list = SchoolComment.objects.filter(school_id=id).order_by('id')

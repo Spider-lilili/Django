@@ -69,8 +69,8 @@ function register1(){
     }
 
     //将密码进行加密
-    var hex_pwd = hex_md5(password);
-    $('#user_password').val(hex_pwd);
+    // var hex_pwd = hex_md5(password);
+    // $('#user_password').val(hex_pwd);
     return true;
     }
 
@@ -89,9 +89,9 @@ function login1(){
     //     $('#cSpan').text('×');
     //     return false;
     // }
-    var hex_pwd = hex_md5(password);
-    $('#pwd').val(hex_pwd);
-    if(verifylogin(user_name,hex_pwd)){
+    // var hex_pwd = hex_md5(password);
+    // $('#pwd').val(hex_pwd);
+    if(verifylogin(user_name,password)){
         return true;
     }
     else{
@@ -163,9 +163,9 @@ function verifypassword() {
         $('#pSpan').text('密码长度不能小于六位');
         return false;
     }
-    var hex_pwd = hex_md5(password);
-    $('#password').val(hex_pwd);
-    var hex_pwd1 = hex_md5(password1);
-    $('#password1').val(hex_pwd1);
+    // var hex_pwd = hex_md5(password);
+    // $('#password').val(hex_pwd);
+    // var hex_pwd1 = hex_md5(password1);
+    // $('#password1').val(hex_pwd1);
     return flag;
 }
