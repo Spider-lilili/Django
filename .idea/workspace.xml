@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae71c5d-f7f7-463d-8626-77fb2ac7b916" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/centerstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/iconfont.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/templates/school_base_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/school/templates/school_base_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/center.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/center.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +174,7 @@
       <workItem from="1588162315002" duration="136000" />
       <workItem from="1588216978031" duration="414000" />
       <workItem from="1588378081415" duration="8266000" />
-      <workItem from="1588493509271" duration="708000" />
+      <workItem from="1588493509271" duration="1080000" />
     </task>
     <servers />
   </component>
