@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block headerjs %}
+    <link href="/static/write_comment.css" rel="stylesheet"/>
+    <link media="screen" href="/static/grade.css" type="text/css" rel="stylesheet"/>
+    <script src="/static/jquery-latest.pack.js" type="text/javascript"></script>
+    <script src="/static/grade.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block main %}
+    <div class="school_content_left_1_4" style="margin-left: 400px;">
+        <div class="recommend_box">
+            <div class="info_title_box clearfix">
+                <div class="info_title_left">
+                    <p class="title_border"></p>
+                    <span>
+                        <span class="cursor">
+                            院校口碑
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="tuijian">
+                <form method="post">
+                    {% csrf_token %}
+                    <h4>我的评分</h4>
+                    <div id="myPoint">
+                        <span name="point"><big>5</big><small>.0</small></span>
+                        <img src="/static/star5.gif"/>
+                        <em>(一般)</em>
+
+                    </div>
+                    <div id="doPoint" style="margin-top: 10px">
+                        <p>请点击以下星级进行评分：我的评分=(学习指数+生活指数+就业指数)/3</p>
+                        <table cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                            <tr>
+                                <th>学习指数：</th>
+                                <td><span class="star5" id="item1"
+                                          v="5"><small>1</small><small>2</small><small>3</small><small>4</small><small>5</small><small>6</small><small>7</small><small>8</small><small>9</small><small>10</small></span>
+                                </td>
+                                <td><strong>5</strong> <em>(一般)</em></td>
+                            </tr>
+                            <tr>
+                                <th>生活指数：</th>
+                                <td><span class="star5" id="item2"
+                                          v="5"><small>1</small><small>2</small><small>3</small><small>4</small><small>5</small><small>6</small><small>7</small><small>8</small><small>9</small><small>10</small></span>
+                                </td>
+                                <td><strong>5</strong> <em>(一般)</em></td>
+                            </tr>
+                            <tr>
+                                <th>就业指数：</th>
+                                <td><span class="star5" id="item3"
+                                          v="5"><small>1</small><small>2</small><small>3</small><small>4</small><small>5</small><small>6</small><small>7</small><small>8</small><small>9</small><small>10</small></span>
+                                </td>
+                                <td><strong>5</strong> <em>(一般)</em></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text_comment">
+                        <textarea id="text_ipt" type="text" placeholder="请说说您对该高校的看法吧"></textarea>
+                    </div>
+                    <div class="role_box">
+                        <ul class="role_ul clearfix">
+                            <li class="active_role_li cursor">在校生</li>
+                            <li class="cursor">校友</li>
+                            <li class="cursor">其他</li>
+                        </ul>
+                    </div>
+                    <div class="submit_box">
+                        <button class="toupiao" type="submit" style="margin-left: 150px;">提交</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

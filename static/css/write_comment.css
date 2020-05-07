@@ -1,0 +1,180 @@
+/*标题*/
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    background-color: #fff;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+}
+.school-content {
+    width: 1200px;
+    margin: 50px auto;
+}
+.school_content_1_4 {
+    margin-bottom: 50px !important;
+}
+.school_content_left_1_4 {
+    width: 750px !important;
+    padding-right: 30px;
+    position: relative;
+    float: left;
+    padding-left: 10px;
+}
+div {
+    display: block;
+}
+.info_title_box .info_title_left .title_border {
+    float: left;
+    width: 5px;
+    height: 24px;
+    background: #1ea5eb;
+    margin: 6px 10px 0 0;
+}
+.cursor {
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    background-color: #fff;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+}
+.recommend_box {
+    padding-left: 10px;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix {
+    zoom: 1;
+}
+.info_title_box {
+    margin-bottom: 25px;
+}
+.info_title_box .info_title_left {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+
+
+/*评论*/
+.text_comment {
+    width: 519px;
+    height: 160px;
+    background: #fff;
+    border: 1px solid #bfbfbf;
+    margin: 3px 0 19px 1px;
+    position: relative;
+}
+.text_comment #text_ipt {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    resize: none;
+    border: none;
+    outline: none;
+    text-indent: 10px;
+    padding-top: 16px;
+}
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+input[type='text'], input[type='password'], input[type='number'], textarea {
+    -webkit-appearance: none;
+}
+
+
+.role_box {
+    margin-bottom: 53px;
+}
+.clearfix {
+    zoom: 1;
+}
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+.role_box .role_ul .active_role_li {
+    background: rgba(30,165,235,0.1);
+    border: 1px solid #1ea5eb;
+    color: #1EA5EB;
+}
+.role_box .role_ul li {
+    font-size: 14px;
+    width: 80px;
+    height: 24px;
+    line-height: 22px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #bababa;
+    color: #333;
+    border-radius: 12px;
+    float: left;
+    margin-right: 10px;
+}
+.cursor {
+    cursor: pointer;
+}
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+
+.submit_box {
+    width: 519px;
+}
+.submit_box .toupiao {
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    background: #1ea5eb;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #fff;
+}

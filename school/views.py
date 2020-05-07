@@ -131,6 +131,19 @@ class CommentView(LoginRequiredMixin, View):
                           {"id": id, "comment_list": schools, "school": school_info, "base_info": base_info})
 
 
+class WriteComment(LoginRequiredMixin, View):
+    def get(self, request, id=459):
+        school_info, base_info = get_base_info(id)
+        return render(request, 'write_comment.html', {"school": school_info, "base_info": base_info})
+
+    def post(self, request):
+        point = request.POST.get('point','')
+        username = request.user.username
+
+        print(point,username)
+        return HttpResponseRedirect('/school/')
+
+
 class SearchView(View):
     def post(self, request):
         school_name = request.POST.get('search', '')
