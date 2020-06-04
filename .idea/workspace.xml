@@ -2,27 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae71c5d-f7f7-463d-8626-77fb2ac7b916" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/school/templates/write_comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/grade.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/write_comment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/star_small.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/grade.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-latest.pack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bishe/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bishe/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3-1.25.9.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3-1.25.9.dist-info/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3-1.25.9.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3-1.25.9.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3-1.25.9.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3-1.25.9.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/_collections.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/_collections.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/connectionpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/connectionpool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/_appengine_environ.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/_appengine_environ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/_securetransport/bindings.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/_securetransport/bindings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/_securetransport/low_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/_securetransport/low_level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/appengine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/ntlmpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/ntlmpool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/securetransport.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/securetransport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/socks.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/contrib/socks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/fields.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/filepost.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/filepost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/backports/makefile.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/backports/makefile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/six.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/ssl_match_hostname/_implementation.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/poolmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/poolmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/retry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/ssl_.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/ssl_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/timeout.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/timeout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/wait.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/urllib3/util/wait.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +216,16 @@
       <workItem from="1588681229585" duration="289000" />
       <workItem from="1588721130198" duration="5727000" />
       <workItem from="1588761569168" duration="4413000" />
-      <workItem from="1588814114781" duration="5391000" />
+      <workItem from="1588814114781" duration="5818000" />
+      <workItem from="1588923573771" duration="373000" />
+      <workItem from="1588933299044" duration="270000" />
+      <workItem from="1589180084868" duration="246000" />
+      <workItem from="1589373902125" duration="1211000" />
+      <workItem from="1589460037780" duration="2000" />
+      <workItem from="1589792993049" duration="970000" />
+      <workItem from="1589855222254" duration="1510000" />
+      <workItem from="1589938596346" duration="621000" />
+      <workItem from="1591277880812" duration="427000" />
     </task>
     <servers />
   </component>
@@ -214,42 +241,42 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="550" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586175508575" />
-    <state width="1638" height="424" key="GridCell.Tab.0.bottom" timestamp="1588771757818">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1638" height="424" key="GridCell.Tab.0.bottom" timestamp="1589895810708">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="424" key="GridCell.Tab.0.bottom/-960.84.960.704/0.0.1680.1050@0.0.1680.1050" timestamp="1588724648293" />
-    <state width="1638" height="424" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588771532576" />
+    <state width="1638" height="424" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589895810708" />
     <state width="1638" height="424" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587468252072" />
     <state width="1638" height="424" key="GridCell.Tab.0.bottom/0.23.1680.956@0.23.1680.956" timestamp="1587560109696" />
     <state width="1638" height="424" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1587992071390" />
-    <state width="1638" height="424" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1588771757818" />
-    <state width="1638" height="424" key="GridCell.Tab.0.center" timestamp="1588771757817">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1638" height="424" key="GridCell.Tab.0.bottom/0.23.1680.963@0.23.1680.963" timestamp="1589809647728" />
+    <state width="1638" height="424" key="GridCell.Tab.0.center" timestamp="1589895810707">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="424" key="GridCell.Tab.0.center/-960.84.960.704/0.0.1680.1050@0.0.1680.1050" timestamp="1588724648291" />
-    <state width="1638" height="424" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588771532575" />
+    <state width="1638" height="424" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589895810707" />
     <state width="1638" height="424" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1587468252071" />
     <state width="1638" height="424" key="GridCell.Tab.0.center/0.23.1680.956@0.23.1680.956" timestamp="1587560109695" />
     <state width="1638" height="424" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1587992071389" />
-    <state width="1638" height="424" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1588771757817" />
-    <state width="1638" height="424" key="GridCell.Tab.0.left" timestamp="1588771757817">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1638" height="424" key="GridCell.Tab.0.center/0.23.1680.963@0.23.1680.963" timestamp="1589809647727" />
+    <state width="1638" height="424" key="GridCell.Tab.0.left" timestamp="1589895810707">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="424" key="GridCell.Tab.0.left/-960.84.960.704/0.0.1680.1050@0.0.1680.1050" timestamp="1588724648289" />
-    <state width="1638" height="424" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588771532574" />
+    <state width="1638" height="424" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589895810707" />
     <state width="1638" height="424" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1587468252071" />
     <state width="1638" height="424" key="GridCell.Tab.0.left/0.23.1680.956@0.23.1680.956" timestamp="1587560109694" />
     <state width="1638" height="424" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1587992071388" />
-    <state width="1638" height="424" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1588771757817" />
-    <state width="1638" height="424" key="GridCell.Tab.0.right" timestamp="1588771757818">
-      <screen x="0" y="23" width="1680" height="963" />
+    <state width="1638" height="424" key="GridCell.Tab.0.left/0.23.1680.963@0.23.1680.963" timestamp="1589809647726" />
+    <state width="1638" height="424" key="GridCell.Tab.0.right" timestamp="1589895810708">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="424" key="GridCell.Tab.0.right/-960.84.960.704/0.0.1680.1050@0.0.1680.1050" timestamp="1588724648292" />
-    <state width="1638" height="424" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588771532575" />
+    <state width="1638" height="424" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589895810708" />
     <state width="1638" height="424" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1587468252072" />
     <state width="1638" height="424" key="GridCell.Tab.0.right/0.23.1680.956@0.23.1680.956" timestamp="1587560109695" />
     <state width="1638" height="424" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1587992071389" />
-    <state width="1638" height="424" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1588771757818" />
+    <state width="1638" height="424" key="GridCell.Tab.0.right/0.23.1680.963@0.23.1680.963" timestamp="1589809647727" />
     <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1586779404584">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
@@ -270,10 +297,10 @@
     </state>
     <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586764556194" />
     <state width="1638" height="363" key="GridCell.Tab.1.right/0.23.1680.954@0.23.1680.954" timestamp="1586779404584" />
-    <state x="341" y="164" key="SettingsEditor" timestamp="1587456842782">
+    <state x="341" y="164" key="SettingsEditor" timestamp="1589942914507">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1587456842782" />
+    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1589942914507" />
     <state x="623" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588723849624">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

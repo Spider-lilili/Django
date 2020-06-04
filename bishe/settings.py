@@ -29,7 +29,7 @@ SECRET_KEY = '$b_*2i18+1*qwrz%kfe_9d9o35xvxaraym^hu+31zr5fo6-=%0'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['47.94.20.178','localhost','0.0.0.0:8000','127.0.0.1','192.168.1.5']
+ALLOWED_HOSTS = ['47.94.20.178','localhost','0.0.0.0:8000','127.0.0.1','192.168.1.5', '192.168.1.247']
 
 
 # Application definition
