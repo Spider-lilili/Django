@@ -70,7 +70,7 @@ class LoginView(View):
             # # 同步发送邮件（会导致阻塞）
             # send_mail(subject, message, sender, receiver, html_message=html_message)
             # 使用celery异步发送邮件（目前暂不支持python3.7）
-            html_message = '<h1>Dear, {} !,欢迎注册高校信息查询网，<br>请点击您的激活连接<a href="http://127.0.0.1:8000/active/{}"></a>http://127.0.0.1:8000/active/{}</h1>'.format(
+            html_message = '<h1>Dear, {} !,欢迎注册高校信息查询网，<br>请点击您的激活连接<a href="http://192.168.1.247:8080/active/{}"></a>http://192.168.1.247:8080/active/{}</h1>'.format(
                 user.username, token, token)
             send_active_email.delay(user.username, user.email, token, html_message)
 
@@ -132,7 +132,7 @@ class ActiveView(View):
             user = UserProfile.objects.get(id=user_id)
             user.is_active = 1
             user.save()
-            return HttpResponseRedirect('/school/')
+            return HttpResponseRedirect('/login/')
         except SignatureExpired:
             return HttpResponse('该激活链接已过期！！！')
 
@@ -146,7 +146,7 @@ class ReceiveEmail(View):
         serializer = Serializer(settings.SECRET_KEY, 7200)
         info = {'confirm': username}
         token = serializer.dumps(info).decode('utf8')
-        html_message = '<h1>Dear, {} !,我们听说您丢失了高校信息查询网的密码。对于那个很抱歉！<br>但是不用担心！您可以使用下面的链接重置您的密码：<a href="http://127.0.0.1:8000/changepassword/{}"></a>http://127.0.0.1:8000/changepassword/{}</h1>'.format(
+        html_message = '<h1>Dear, {} !,我们听说您丢失了高校信息查询网的密码。对于那个很抱歉！<br>但是不用担心！您可以使用下面的链接重置您的密码：<a href="http://192.168.1.247:8080/changepassword/{}"></a>http://192.168.1.247:8080/changepassword/{}</h1>'.format(
             username, token, token)
         send_active_email.delay(username, email, token, html_message)
         return HttpResponseRedirect('/login/')
